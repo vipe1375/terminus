@@ -1,38 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Metroooooo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-</head>
-<body>
-<div class="headerContainer">
-    Jeu du metro :  <div id="output"></div>
-</div>
-
-<div class="mapContainer">
-    <div class="mapCircle">
-        <div id="map">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Metroooooo</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
+        <script src="leaflet-rotate.js"></script>
+    </head>
+    <body>
+        <div class="headerContainer">
+            Jeu du metro :
+            <div id="output"></div>
         </div>
-    </div>
-</div>
 
-<form autocomplete="off">
-  <div class="autocomplete">
-      <input id="guess" type="text" name="myCountry" placeholder="Entrez une station">
-      <input type="button" value="OK">
-  </div>
+        <div class="mapContainer">
+            <div class="mapCircle">
+                <div id="map"></div>
+            </div>
+        </div>
 
-</form>
+        <form id="guessForm" autocomplete="off">
+            <div class="autocomplete">
+                <input
+                    id="guess"
+                    type="text"
+                    placeholder="Entrez une station"
+                />
+                <button type="submit">OK</button>
+            </div>
+        </form>
 
+        <div id="attempts" class="attemptsContainer"></div>
 
-<script src="game.js"></script>
+        <div id="options" class="optionsContainer">
+            <label class="option">
+                <input type="checkbox" id="streetsNamesOption" />
+                Afficher les noms des rues
+            </label>
 
-</body>
+            <label class="option">
+                <input type="checkbox" id="mapRotationOption" />
+                Orienter la carte au nord
+            </label>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
 </html>
