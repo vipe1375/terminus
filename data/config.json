@@ -1,0 +1,8 @@
+{
+  "radiusMeters": 50000,
+  "maxGuesses": 6,
+  "defaultStreetNames": false,
+  "defaultLines": false,
+  "defaultNeighbours": false,
+  "defaultRotation": true
+}

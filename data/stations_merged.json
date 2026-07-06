@@ -1,0 +1,5846 @@
+[
+  {
+    "name": "Abbesses",
+    "lat": 48.884594208035345,
+    "lon": 2.337949777055663,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1513884
+  },
+  {
+    "name": "Aimé Césaire",
+    "lat": 48.90808243782026,
+    "lon": 2.377741481106109,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Alexandre Dumas",
+    "lat": 48.85622809125615,
+    "lon": 2.3946756547920462,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2476608
+  },
+  {
+    "name": "Alma - Marceau",
+    "lat": 48.86476684497177,
+    "lon": 2.3009910034955845,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2564842
+  },
+  {
+    "name": "Alésia",
+    "lat": 48.82818847631351,
+    "lon": 2.3271646496078247,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098136
+  },
+  {
+    "name": "Anatole France",
+    "lat": 48.89208278597481,
+    "lon": 2.285009502746195,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2311825
+  },
+  {
+    "name": "Anvers",
+    "lat": 48.882972767827276,
+    "lon": 2.3446670737483,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3420749
+  },
+  {
+    "name": "Argentine",
+    "lat": 48.87533684211653,
+    "lon": 2.2901275088247015,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2079212
+  },
+  {
+    "name": "Arts et Métiers",
+    "lat": 48.8655864775997,
+    "lon": 2.3567367568060975,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2403042
+  },
+  {
+    "name": "Assemblée Nationale",
+    "lat": 48.860786962627444,
+    "lon": 2.320998191965805,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 611512
+  },
+  {
+    "name": "Aubervilliers Pantin - Quatre Chemins",
+    "lat": 48.903783881045044,
+    "lon": 2.3922212211711154,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5616435
+  },
+  {
+    "name": "Avenue Émile Zola",
+    "lat": 48.84699703133652,
+    "lon": 2.2950191304763616,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1041233
+  },
+  {
+    "name": "Avron",
+    "lat": 48.85190531895693,
+    "lon": 2.3979973148307456,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1345521
+  },
+  {
+    "name": "Aéroport d'Orly",
+    "lat": 48.7280833904763,
+    "lon": 2.3625914696897388,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Bagneux - Lucie Aubrac",
+    "lat": 48.80363023251622,
+    "lon": 2.3180536133372955,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Balard",
+    "lat": 48.83629530154249,
+    "lon": 2.278330259866024,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3236801
+  },
+  {
+    "name": "Barbara",
+    "lat": 48.80970399753329,
+    "lon": 2.3174491879233723,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Barbès-Rochechouart",
+    "lat": 48.88373439813717,
+    "lon": 2.349525203221073,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5390939
+  },
+  {
+    "name": "Basilique de Saint-Denis",
+    "lat": 48.93741706327866,
+    "lon": 2.3600793855376887,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "1",
+        "long": "Tram 1",
+        "color": "#004494",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3991395
+  },
+  {
+    "name": "Bastille",
+    "lat": 48.85343696230164,
+    "lon": 2.368736572626169,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 8069243
+  },
+  {
+    "name": "Bel-Air",
+    "lat": 48.84133824733352,
+    "lon": 2.400918536800477,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1605573
+  },
+  {
+    "name": "Belleville",
+    "lat": 48.87199369176021,
+    "lon": 2.377029776704534,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 7314438
+  },
+  {
+    "name": "Bercy",
+    "lat": 48.84030209337709,
+    "lon": 2.379121776442215,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3884212
+  },
+  {
+    "name": "Bibliothèque François Mitterrand",
+    "lat": 48.82888070077747,
+    "lon": 2.37769700026936,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 11104474
+  },
+  {
+    "name": "Billancourt",
+    "lat": 48.83173796437048,
+    "lon": 2.2374367869806067,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1967532
+  },
+  {
+    "name": "Bir-Hakeim",
+    "lat": 48.85394260621378,
+    "lon": 2.2893345327788075,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3362908
+  },
+  {
+    "name": "Blanche",
+    "lat": 48.88355629016869,
+    "lon": 2.3333796724221587,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2167570
+  },
+  {
+    "name": "Bobigny Pablo Picasso",
+    "lat": 48.90637477027002,
+    "lon": 2.4491899044888523,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "1",
+        "long": "Tram 1",
+        "color": "#004494",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 6561327
+  },
+  {
+    "name": "Bobigny-Pantin - Raymond Queneau",
+    "lat": 48.89545467305926,
+    "lon": 2.425326891530145,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2335465
+  },
+  {
+    "name": "Boissière",
+    "lat": 48.86698310944948,
+    "lon": 2.290058833580487,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1224181
+  },
+  {
+    "name": "Bolivar",
+    "lat": 48.880667463449086,
+    "lon": 2.3744959648969295,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 367598
+  },
+  {
+    "name": "Bonne Nouvelle",
+    "lat": 48.870590478011124,
+    "lon": 2.3484911310789895,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2806227
+  },
+  {
+    "name": "Botzaris",
+    "lat": 48.87949311063143,
+    "lon": 2.388566870447523,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 669323
+  },
+  {
+    "name": "Boucicaut",
+    "lat": 48.841094056349604,
+    "lon": 2.2879457664996647,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2288055
+  },
+  {
+    "name": "Boulogne - Jean Jaurès",
+    "lat": 48.84200534729823,
+    "lon": 2.2388873285155366,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2700354
+  },
+  {
+    "name": "Boulogne - Pont de Saint-Cloud",
+    "lat": 48.8407450152269,
+    "lon": 2.2285369815049423,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2182738
+  },
+  {
+    "name": "Bourse",
+    "lat": 48.86865415183625,
+    "lon": 2.3413760511435733,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1725043
+  },
+  {
+    "name": "Brochant",
+    "lat": 48.89058718660407,
+    "lon": 2.3201747557878036,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1543298
+  },
+  {
+    "name": "Bréguet-Sabin",
+    "lat": 48.85614071296076,
+    "lon": 2.3702093410963836,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1490160
+  },
+  {
+    "name": "Buttes-Chaumont",
+    "lat": 48.87851411403087,
+    "lon": 2.381614513292406,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 358301
+  },
+  {
+    "name": "Buzenval",
+    "lat": 48.85197520932561,
+    "lon": 2.401927284511547,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1448855
+  },
+  {
+    "name": "Bérault",
+    "lat": 48.845470707583566,
+    "lon": 2.4292051663480003,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2106827
+  },
+  {
+    "name": "Cadet",
+    "lat": 48.87600859381197,
+    "lon": 2.3445724820893283,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1843984
+  },
+  {
+    "name": "Cambronne",
+    "lat": 48.84750708198887,
+    "lon": 2.302968296454798,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1636566
+  },
+  {
+    "name": "Campo Formio",
+    "lat": 48.835152535740804,
+    "lon": 2.3585662563494667,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1016150
+  },
+  {
+    "name": "Cardinal Lemoine",
+    "lat": 48.846656851250046,
+    "lon": 2.351623256378513,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1121854
+  },
+  {
+    "name": "Carrefour Pleyel",
+    "lat": 48.91900755521728,
+    "lon": 2.3426080144231554,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1535528
+  },
+  {
+    "name": "Censier-Daubenton",
+    "lat": 48.84023383632875,
+    "lon": 2.3516064753021904,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2291843
+  },
+  {
+    "name": "Champs-Élysées – Clemenceau",
+    "lat": 48.86779973445541,
+    "lon": 2.3138819376821598,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1909005
+  },
+  {
+    "name": "Chardon Lagache",
+    "lat": 48.84520470267353,
+    "lon": 2.2664415403695077,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 482053
+  },
+  {
+    "name": "Charenton-Écoles",
+    "lat": 48.821897939434606,
+    "lon": 2.413132938342708,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2164023
+  },
+  {
+    "name": "Charles De Gaulle-Étoile",
+    "lat": 48.874204186324654,
+    "lon": 2.2947732143825275,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "A",
+        "long": "RER A",
+        "color": "#E3051C",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4291663
+  },
+  {
+    "name": "Charles Michels",
+    "lat": 48.8465346367312,
+    "lon": 2.2859992220590075,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3079569
+  },
+  {
+    "name": "Charonne",
+    "lat": 48.855094494476994,
+    "lon": 2.3846997601328437,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2705320
+  },
+  {
+    "name": "Chaussée d'Antin - La Fayette",
+    "lat": 48.87296814081129,
+    "lon": 2.333257091791215,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4251916
+  },
+  {
+    "name": "Chemin Vert",
+    "lat": 48.857103257226655,
+    "lon": 2.368184109510194,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1018958
+  },
+  {
+    "name": "Chevaleret",
+    "lat": 48.83494772234806,
+    "lon": 2.368126329061812,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2748696
+  },
+  {
+    "name": "Chevilly-Larue",
+    "lat": 48.75955015404931,
+    "lon": 2.366485372253663,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Château d'Eau",
+    "lat": 48.87262083992817,
+    "lon": 2.356153947450339,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2687103
+  },
+  {
+    "name": "Château de Vincennes",
+    "lat": 48.84445639456913,
+    "lon": 2.440439978057246,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3617738
+  },
+  {
+    "name": "Château Rouge",
+    "lat": 48.88671096804134,
+    "lon": 2.349559430194618,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5841122
+  },
+  {
+    "name": "Château-Landon",
+    "lat": 48.87844430039445,
+    "lon": 2.3619653022299603,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1140353
+  },
+  {
+    "name": "Châtelet",
+    "lat": 48.85806186227698,
+    "lon": 2.347625155718968,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 8350794
+  },
+  {
+    "name": "Châtillon-Montrouge",
+    "lat": 48.81074648768823,
+    "lon": 2.3016785568320435,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "6",
+        "long": "Tram 6",
+        "color": "#E2231A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5034012
+  },
+  {
+    "name": "Cité",
+    "lat": 48.85493638016467,
+    "lon": 2.3473213184077157,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1004657
+  },
+  {
+    "name": "Cluny-La Sorbonne",
+    "lat": 48.851050282314304,
+    "lon": 2.3442733454213514,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1261818
+  },
+  {
+    "name": "Colonel Fabien",
+    "lat": 48.87761018741785,
+    "lon": 2.370811395312745,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3043606
+  },
+  {
+    "name": "Commerce",
+    "lat": 48.844794764611095,
+    "lon": 2.2939519636365344,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2212666
+  },
+  {
+    "name": "Concorde",
+    "lat": 48.86628580458389,
+    "lon": 2.3229434122435415,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3401219
+  },
+  {
+    "name": "Convention",
+    "lat": 48.837099428223645,
+    "lon": 2.296231386803389,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3734750
+  },
+  {
+    "name": "Corentin Cariou",
+    "lat": 48.89465585833331,
+    "lon": 2.382160158371538,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1697076
+  },
+  {
+    "name": "Corentin Celton",
+    "lat": 48.82708544889644,
+    "lon": 2.2794116820504207,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2504682
+  },
+  {
+    "name": "Corvisart",
+    "lat": 48.829790513685566,
+    "lon": 2.3504148706484043,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1570331
+  },
+  {
+    "name": "Coteaux Beauclair",
+    "lat": 48.88224373133741,
+    "lon": 2.4673561174182512,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Cour Saint-Émilion",
+    "lat": 48.83333855925167,
+    "lon": 2.386632402066985,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2985122
+  },
+  {
+    "name": "Courcelles",
+    "lat": 48.87932978868225,
+    "lon": 2.3040703912187603,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1583429
+  },
+  {
+    "name": "Couronnes",
+    "lat": 48.869091162925,
+    "lon": 2.3805425859893425,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2151515
+  },
+  {
+    "name": "Crimée",
+    "lat": 48.890906449558166,
+    "lon": 2.377090439088876,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3543952
+  },
+  {
+    "name": "Croix de Chavaux",
+    "lat": 48.85778351458649,
+    "lon": 2.434538451473474,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3729545
+  },
+  {
+    "name": "Créteil - Pointe du Lac",
+    "lat": 48.76875656274775,
+    "lon": 2.464409842125707,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "CABLE",
+        "short": "1",
+        "long": "CABLE 1",
+        "color": "#A0A017",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2114438
+  },
+  {
+    "name": "Créteil-Université",
+    "lat": 48.789920466889434,
+    "lon": 2.45051152829059,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2496595
+  },
+  {
+    "name": "Créteil–L’Échat",
+    "lat": 48.79668213499687,
+    "lon": 2.4494128051458075,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1660120
+  },
+  {
+    "name": "Créteil–Préfecture",
+    "lat": 48.78000282890859,
+    "lon": 2.4593631290764044,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3330602
+  },
+  {
+    "name": "Danube",
+    "lat": 48.88181610818685,
+    "lon": 2.394012398359364,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 400157
+  },
+  {
+    "name": "Daumesnil",
+    "lat": 48.83956719833751,
+    "lon": 2.3959529265887243,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3634023
+  },
+  {
+    "name": "Denfert-Rochereau",
+    "lat": 48.83307317062929,
+    "lon": 2.333203670349575,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "B",
+        "long": "RER B",
+        "color": "#5091CB",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2543959
+  },
+  {
+    "name": "Dugommier",
+    "lat": 48.83904114372092,
+    "lon": 2.3896200154238474,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1725412
+  },
+  {
+    "name": "Dupleix",
+    "lat": 48.85043455079591,
+    "lon": 2.2936124344381383,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2028963
+  },
+  {
+    "name": "Duroc",
+    "lat": 48.84685485485275,
+    "lon": 2.316634671114557,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2645064
+  },
+  {
+    "name": "Edgar Quinet",
+    "lat": 48.84066322929957,
+    "lon": 2.3263846107928465,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1349178
+  },
+  {
+    "name": "Esplanade de la Défense",
+    "lat": 48.88813847761218,
+    "lon": 2.2497927690097654,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4708183
+  },
+  {
+    "name": "Europe",
+    "lat": 48.87877036848684,
+    "lon": 2.322265213118895,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1106459
+  },
+  {
+    "name": "Exelmans",
+    "lat": 48.84241277035873,
+    "lon": 2.259608472752572,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1607223
+  },
+  {
+    "name": "Faidherbe Chaligny",
+    "lat": 48.85017786190036,
+    "lon": 2.3840922100662962,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2190416
+  },
+  {
+    "name": "Falguière",
+    "lat": 48.84447014129587,
+    "lon": 2.317852783041332,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 650291
+  },
+  {
+    "name": "Filles du Calvaire",
+    "lat": 48.86325794496611,
+    "lon": 2.3666610947164908,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1093673
+  },
+  {
+    "name": "Fort d'Aubervilliers",
+    "lat": 48.91494975727623,
+    "lon": 2.4044090887818643,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3103518
+  },
+  {
+    "name": "Franklin D. Roosevelt",
+    "lat": 48.86902652727292,
+    "lon": 2.309935388712291,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 6173830
+  },
+  {
+    "name": "Front Populaire",
+    "lat": 48.90656714598029,
+    "lon": 2.3659203194009595,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1948542
+  },
+  {
+    "name": "Félix Faure",
+    "lat": 48.84274677979288,
+    "lon": 2.2919124133178745,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1161978
+  },
+  {
+    "name": "Gabriel Péri",
+    "lat": 48.916382309922106,
+    "lon": 2.2946851117025546,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3790573
+  },
+  {
+    "name": "Gallieni",
+    "lat": 48.865335317260985,
+    "lon": 2.4166972728577103,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3899195
+  },
+  {
+    "name": "Gambetta",
+    "lat": 48.86494345333216,
+    "lon": 2.3979963883271713,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "3bis",
+        "long": "Metro 3bis",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4796724
+  },
+  {
+    "name": "Gare d'Austerlitz",
+    "lat": 48.8425280267915,
+    "lon": 2.365433384726206,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 6318543
+  },
+  {
+    "name": "Gare de l'Est",
+    "lat": 48.877375619879636,
+    "lon": 2.3594566169442075,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "P",
+        "long": "Transilien P",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 15538471
+  },
+  {
+    "name": "Gare de Lyon",
+    "lat": 48.84413934986018,
+    "lon": 2.373259978073185,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "R",
+        "long": "Transilien R",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "A",
+        "long": "RER A",
+        "color": "#E3051C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "D",
+        "long": "RER D",
+        "color": "#00A88F",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 28640475
+  },
+  {
+    "name": "Gare du Nord",
+    "lat": 48.880922007570774,
+    "lon": 2.356328543659047,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "H",
+        "long": "Transilien H",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAIN",
+        "short": "K",
+        "long": "Transilien K",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "B",
+        "long": "RER B",
+        "color": "#5091CB",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "D",
+        "long": "RER D",
+        "color": "#00A88F",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 34503097
+  },
+  {
+    "name": "Garibaldi",
+    "lat": 48.906094050248626,
+    "lon": 2.3318308379624098,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1965002
+  },
+  {
+    "name": "Gaîté",
+    "lat": 48.83863164713647,
+    "lon": 2.3224917484505485,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1644148
+  },
+  {
+    "name": "George V",
+    "lat": 48.87202380950045,
+    "lon": 2.3005604512487974,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3842260
+  },
+  {
+    "name": "Glacière",
+    "lat": 48.831129548026645,
+    "lon": 2.3435116577497763,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3005750
+  },
+  {
+    "name": "Goncourt",
+    "lat": 48.86995751270301,
+    "lon": 2.3710948397312004,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2199170
+  },
+  {
+    "name": "Grands Boulevards",
+    "lat": 48.87125654594185,
+    "lon": 2.34456106066273,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3737316
+  },
+  {
+    "name": "Guy Môquet",
+    "lat": 48.892206827747096,
+    "lon": 2.3272198679191285,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2205313
+  },
+  {
+    "name": "Havre-Caumartin",
+    "lat": 48.87380673386256,
+    "lon": 2.326999858880872,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5894982
+  },
+  {
+    "name": "Hoche",
+    "lat": 48.89122859411636,
+    "lon": 2.402352146617702,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3928404
+  },
+  {
+    "name": "Hôpital Bicêtre",
+    "lat": 48.80981003194872,
+    "lon": 2.349750100298353,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Hôtel de Ville",
+    "lat": 48.85755155329653,
+    "lon": 2.351292209334573,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 7251729
+  },
+  {
+    "name": "Invalides",
+    "lat": 48.862884804554966,
+    "lon": 2.31251355492596,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3482080
+  },
+  {
+    "name": "Iéna",
+    "lat": 48.86479406489217,
+    "lon": 2.2941620140312113,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1646925
+  },
+  {
+    "name": "Jacques Bonsergent",
+    "lat": 48.87039638922484,
+    "lon": 2.3614002104327776,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1743989
+  },
+  {
+    "name": "Jasmin",
+    "lat": 48.8525040906129,
+    "lon": 2.268176749435961,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1418238
+  },
+  {
+    "name": "Jaurès",
+    "lat": 48.88273813278425,
+    "lon": 2.370122312281105,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4055461
+  },
+  {
+    "name": "Javel",
+    "lat": 48.84715690155799,
+    "lon": 2.278036281995908,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1589561
+  },
+  {
+    "name": "Jourdain",
+    "lat": 48.875111816042825,
+    "lon": 2.3894150293193657,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1881321
+  },
+  {
+    "name": "Jules Joffrin",
+    "lat": 48.892418922945716,
+    "lon": 2.3447646117383565,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2854819
+  },
+  {
+    "name": "Jussieu",
+    "lat": 48.84615112308062,
+    "lon": 2.3549179836962724,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2889642
+  },
+  {
+    "name": "Kléber",
+    "lat": 48.87126214446096,
+    "lon": 2.2932406499473137,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 724215
+  },
+  {
+    "name": "L'Haÿ-les-Roses",
+    "lat": 48.77531361288962,
+    "lon": 2.3543649431994953,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "La Chapelle",
+    "lat": 48.8843996770653,
+    "lon": 2.360399500808732,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4855531
+  },
+  {
+    "name": "La Courneuve 8 Mai 1945",
+    "lat": 48.92078596905619,
+    "lon": 2.410598615104874,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "1",
+        "long": "Tram 1",
+        "color": "#004494",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4924444
+  },
+  {
+    "name": "La Dhuys",
+    "lat": 48.877993387689884,
+    "lon": 2.4654717467571627,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "La Défense",
+    "lat": 48.89218707644951,
+    "lon": 2.237018056395014,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "L",
+        "long": "Transilien L",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAIN",
+        "short": "U",
+        "long": "Transilien U",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "A",
+        "long": "RER A",
+        "color": "#E3051C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "E",
+        "long": "RER E",
+        "color": "#C24193",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "2",
+        "long": "Tram 2",
+        "color": "#C6017E",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 9256802
+  },
+  {
+    "name": "La Fourche",
+    "lat": 48.88718394686579,
+    "lon": 2.3257796748068915,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1829271
+  },
+  {
+    "name": "La Motte Picquet-Grenelle",
+    "lat": 48.84906456347491,
+    "lon": 2.297916591840311,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5117708
+  },
+  {
+    "name": "La Muette",
+    "lat": 48.858046055376214,
+    "lon": 2.2741546283736707,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3010370
+  },
+  {
+    "name": "La Tour Maubourg",
+    "lat": 48.85772541289347,
+    "lon": 2.310565960946845,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1361723
+  },
+  {
+    "name": "Lamarck-Caulaincourt",
+    "lat": 48.88967407570702,
+    "lon": 2.3387606532332543,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1875717
+  },
+  {
+    "name": "Laumière",
+    "lat": 48.884970562766206,
+    "lon": 2.3787169232246455,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3258568
+  },
+  {
+    "name": "Le Kremlin-Bicêtre",
+    "lat": 48.81012995727394,
+    "lon": 2.362263387127349,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2925325
+  },
+  {
+    "name": "Le Peletier",
+    "lat": 48.87497174554318,
+    "lon": 2.34057598204372,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1677832
+  },
+  {
+    "name": "Ledru Rollin",
+    "lat": 48.85152370843435,
+    "lon": 2.3751010337556164,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2570283
+  },
+  {
+    "name": "Les Agnettes",
+    "lat": 48.92310377966602,
+    "lon": 2.2862795775297826,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1890356
+  },
+  {
+    "name": "Les Courtilles",
+    "lat": 48.930757003336296,
+    "lon": 2.284174448283296,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "1",
+        "long": "Tram 1",
+        "color": "#004494",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2802689
+  },
+  {
+    "name": "Les Gobelins",
+    "lat": 48.83593030287887,
+    "lon": 2.3525422662627022,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2365942
+  },
+  {
+    "name": "Les Halles",
+    "lat": 48.86251523497548,
+    "lon": 2.345785860039181,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 10623876
+  },
+  {
+    "name": "Les Sablons",
+    "lat": 48.88101649749112,
+    "lon": 2.272238940611057,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3954920
+  },
+  {
+    "name": "Liberté",
+    "lat": 48.826620065463494,
+    "lon": 2.4058519439819017,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1704609
+  },
+  {
+    "name": "Liège",
+    "lat": 48.87963476065682,
+    "lon": 2.3270222008895027,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1143956
+  },
+  {
+    "name": "Louis Blanc",
+    "lat": 48.88106934171724,
+    "lon": 2.364686107514588,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1548029
+  },
+  {
+    "name": "Louise Michel",
+    "lat": 48.88870601977514,
+    "lon": 2.2880836330485037,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2319185
+  },
+  {
+    "name": "Lourmel",
+    "lat": 48.83873485883676,
+    "lon": 2.2821433781708915,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1696432
+  },
+  {
+    "name": "Louvre-Rivoli",
+    "lat": 48.8608062912721,
+    "lon": 2.3411085916340664,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1869612
+  },
+  {
+    "name": "Mabillon",
+    "lat": 48.85301676701032,
+    "lon": 2.3355020503762605,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1195051
+  },
+  {
+    "name": "Madeleine",
+    "lat": 48.87023324339993,
+    "lon": 2.3251635468278975,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5330928
+  },
+  {
+    "name": "Mairie d'Aubervilliers",
+    "lat": 48.913710545549606,
+    "lon": 2.3807356063950946,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Mairie d'Issy",
+    "lat": 48.82430937109403,
+    "lon": 2.2736655574997546,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2874138
+  },
+  {
+    "name": "Mairie d'Ivry",
+    "lat": 48.81052080428471,
+    "lon": 2.384289600960821,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2042071
+  },
+  {
+    "name": "Mairie de Clichy",
+    "lat": 48.90323367878661,
+    "lon": 2.306010915009083,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4043071
+  },
+  {
+    "name": "Mairie de Montreuil",
+    "lat": 48.86229941281971,
+    "lon": 2.4415218094110314,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 6158487
+  },
+  {
+    "name": "Mairie de Montrouge",
+    "lat": 48.818676409912605,
+    "lon": 2.3197403132985555,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4316647
+  },
+  {
+    "name": "Mairie de Saint-Ouen",
+    "lat": 48.9125834977134,
+    "lon": 2.3342940159066483,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4830810
+  },
+  {
+    "name": "Mairie des Lilas",
+    "lat": 48.879761253997216,
+    "lon": 2.4164796436714395,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2894622
+  },
+  {
+    "name": "Maison Blanche",
+    "lat": 48.82181597799576,
+    "lon": 2.3587857062577715,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1203631
+  },
+  {
+    "name": "Maisons-Alfort-Les Juilliottes",
+    "lat": 48.80335523614523,
+    "lon": 2.445574099678221,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1297495
+  },
+  {
+    "name": "Maisons-Alfort-Stade",
+    "lat": 48.80914436093606,
+    "lon": 2.4345098959336924,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1702479
+  },
+  {
+    "name": "Malakoff - Plateau de Vanves",
+    "lat": 48.82258370865234,
+    "lon": 2.298464194670265,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2242320
+  },
+  {
+    "name": "Malakoff - Rue Étienne Dolet",
+    "lat": 48.81530753209955,
+    "lon": 2.2970777969608616,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1450451
+  },
+  {
+    "name": "Malesherbes",
+    "lat": 48.88289191745414,
+    "lon": 2.309052264550479,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1427143
+  },
+  {
+    "name": "Maraîchers",
+    "lat": 48.85272511927761,
+    "lon": 2.40608916324169,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1994064
+  },
+  {
+    "name": "Marcadet-Poissonniers",
+    "lat": 48.89150083987307,
+    "lon": 2.349620484532985,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3982005
+  },
+  {
+    "name": "Marcel Sembat",
+    "lat": 48.83362878105417,
+    "lon": 2.2435786287393302,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3874792
+  },
+  {
+    "name": "Marx Dormoy",
+    "lat": 48.89048545564586,
+    "lon": 2.359995766383568,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2425928
+  },
+  {
+    "name": "Maubert-Mutualité",
+    "lat": 48.85008987805251,
+    "lon": 2.3482087741854687,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1280387
+  },
+  {
+    "name": "Michel Ange-Auteuil",
+    "lat": 48.847943097200854,
+    "lon": 2.2641304267383107,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1512050
+  },
+  {
+    "name": "Michel Ange-Molitor",
+    "lat": 48.84524119484094,
+    "lon": 2.261893641759714,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1420552
+  },
+  {
+    "name": "Michel Bizot",
+    "lat": 48.83711700699553,
+    "lon": 2.4023331659174443,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1403416
+  },
+  {
+    "name": "Mirabeau",
+    "lat": 48.84713100819624,
+    "lon": 2.2727637533161595,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1001302
+  },
+  {
+    "name": "Miromesnil",
+    "lat": 48.87368521063636,
+    "lon": 2.314467989568736,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3647255
+  },
+  {
+    "name": "Monceau",
+    "lat": 48.88032518647405,
+    "lon": 2.308773835955807,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1148677
+  },
+  {
+    "name": "Montgallet",
+    "lat": 48.84406559730793,
+    "lon": 2.390482133980388,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1108395
+  },
+  {
+    "name": "Montparnasse",
+    "lat": 48.84118692114318,
+    "lon": 2.32050922752816,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "N",
+        "long": "Transilien N",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 20407224
+  },
+  {
+    "name": "Montreuil - Hôpital",
+    "lat": 48.87833670193852,
+    "lon": 2.454714211064978,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Mouton-Duvernet",
+    "lat": 48.83111266037533,
+    "lon": 2.3297050126201846,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1131403
+  },
+  {
+    "name": "Ménilmontant",
+    "lat": 48.866446806067,
+    "lon": 2.383599109573657,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2847264
+  },
+  {
+    "name": "Nation",
+    "lat": 48.84823711041019,
+    "lon": 2.395823588826126,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "A",
+        "long": "RER A",
+        "color": "#E3051C",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 6050797
+  },
+  {
+    "name": "Nationale",
+    "lat": 48.83321671970985,
+    "lon": 2.362856399519012,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1320290
+  },
+  {
+    "name": "Neuilly Porte Maillot",
+    "lat": 48.87734960059362,
+    "lon": 2.2837955570136397,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "E",
+        "long": "RER E",
+        "color": "#C24193",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4138301
+  },
+  {
+    "name": "Notre-Dame-de-Lorette",
+    "lat": 48.876047496005405,
+    "lon": 2.337495844533765,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1893828
+  },
+  {
+    "name": "Notre-Dame-des-Champs",
+    "lat": 48.844942635216896,
+    "lon": 2.3287780255043606,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1487256
+  },
+  {
+    "name": "Oberkampf",
+    "lat": 48.8649965093187,
+    "lon": 2.367957910438627,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3205110
+  },
+  {
+    "name": "Odéon",
+    "lat": 48.85211835384784,
+    "lon": 2.3401703955435385,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3478491
+  },
+  {
+    "name": "Olympiades",
+    "lat": 48.82716361789553,
+    "lon": 2.367173024477846,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5214595
+  },
+  {
+    "name": "Opéra",
+    "lat": 48.87067768184424,
+    "lon": 2.332354639263271,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5193831
+  },
+  {
+    "name": "Ourcq",
+    "lat": 48.886856931501875,
+    "lon": 2.3859131742732758,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2862337
+  },
+  {
+    "name": "Palais Royal - Musée du Louvre",
+    "lat": 48.86259553677277,
+    "lon": 2.3366841700004515,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4822599
+  },
+  {
+    "name": "Parmentier",
+    "lat": 48.86525378605433,
+    "lon": 2.3745819699964126,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2037234
+  },
+  {
+    "name": "Passy",
+    "lat": 48.85744869097511,
+    "lon": 2.2858124441340806,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2080548
+  },
+  {
+    "name": "Pasteur",
+    "lat": 48.842920619084595,
+    "lon": 2.312607049649865,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3026286
+  },
+  {
+    "name": "Pelleport",
+    "lat": 48.86844016327547,
+    "lon": 2.401561712742542,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3bis",
+        "long": "Metro 3bis",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 229524
+  },
+  {
+    "name": "Pereire-Levallois",
+    "lat": 48.88604139991642,
+    "lon": 2.299279102380644,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3130190
+  },
+  {
+    "name": "Pernety",
+    "lat": 48.83422588267789,
+    "lon": 2.318616414425384,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2173567
+  },
+  {
+    "name": "Philippe Auguste",
+    "lat": 48.85806226176241,
+    "lon": 2.3908609523236084,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1262653
+  },
+  {
+    "name": "Picpus",
+    "lat": 48.84506157994489,
+    "lon": 2.4012890198273484,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 931602
+  },
+  {
+    "name": "Pierre et Marie Curie",
+    "lat": 48.81593076304922,
+    "lon": 2.3772672001519357,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1100552
+  },
+  {
+    "name": "Pigalle",
+    "lat": 48.882442690881554,
+    "lon": 2.337085136498658,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3501831
+  },
+  {
+    "name": "Place d'Italie",
+    "lat": 48.83099530130439,
+    "lon": 2.3558348979655523,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 7119097
+  },
+  {
+    "name": "Place de Clichy",
+    "lat": 48.88343001382571,
+    "lon": 2.327228335720636,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5161932
+  },
+  {
+    "name": "Place des Fêtes",
+    "lat": 48.87680638921982,
+    "lon": 2.393056093323957,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2318764
+  },
+  {
+    "name": "Place Monge",
+    "lat": 48.84286683068267,
+    "lon": 2.352224728183084,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1837996
+  },
+  {
+    "name": "Plaisance",
+    "lat": 48.8318256495863,
+    "lon": 2.3141223234708552,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3521753
+  },
+  {
+    "name": "Poissonnière",
+    "lat": 48.877100185798646,
+    "lon": 2.3487755574768467,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2306725
+  },
+  {
+    "name": "Pont de Levallois",
+    "lat": 48.8971540959649,
+    "lon": 2.280413812210846,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2984777
+  },
+  {
+    "name": "Pont de Neuilly",
+    "lat": 48.88470820132254,
+    "lon": 2.260515077888117,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4809503
+  },
+  {
+    "name": "Pont de Sèvres",
+    "lat": 48.829746119994304,
+    "lon": 2.231028100202621,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3430203
+  },
+  {
+    "name": "Pont Marie",
+    "lat": 48.853575473388226,
+    "lon": 2.3571625688817757,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1101482
+  },
+  {
+    "name": "Pont Neuf",
+    "lat": 48.858553827258504,
+    "lon": 2.3422327579938416,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1188930
+  },
+  {
+    "name": "Pont-Cardinet",
+    "lat": 48.888220162764625,
+    "lon": 2.3137324515202713,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "L",
+        "long": "Transilien L",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4168538
+  },
+  {
+    "name": "Porte d'Auteuil",
+    "lat": 48.847971540597705,
+    "lon": 2.2577446803760117,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 375748
+  },
+  {
+    "name": "Porte d'Italie",
+    "lat": 48.81905151465142,
+    "lon": 2.3601297420152623,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1507152
+  },
+  {
+    "name": "Porte d'Ivry",
+    "lat": 48.82135578381409,
+    "lon": 2.3692905873460295,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1282199
+  },
+  {
+    "name": "Porte d'Orléans",
+    "lat": 48.823151633128084,
+    "lon": 2.325509577822384,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 4175817
+  },
+  {
+    "name": "Porte Dauphine",
+    "lat": 48.87146657812766,
+    "lon": 2.277083017052586,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2021656
+  },
+  {
+    "name": "Porte de Bagnolet",
+    "lat": 48.86458519109271,
+    "lon": 2.4087599484207063,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3085790
+  },
+  {
+    "name": "Porte de Champerret",
+    "lat": 48.885949261476256,
+    "lon": 2.2926351594878125,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2101673
+  },
+  {
+    "name": "Porte de Charenton",
+    "lat": 48.83273670175476,
+    "lon": 2.400310403025077,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1529778
+  },
+  {
+    "name": "Porte de Choisy",
+    "lat": 48.819876221042655,
+    "lon": 2.364531950385392,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "9",
+        "long": "Tram 9",
+        "color": "#F59C00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1592144
+  },
+  {
+    "name": "Porte de Clichy",
+    "lat": 48.894168386204164,
+    "lon": 2.315599219182927,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5278497
+  },
+  {
+    "name": "Porte de Clignancourt",
+    "lat": 48.897402222898094,
+    "lon": 2.344847748752399,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5611814
+  },
+  {
+    "name": "Porte de la Chapelle",
+    "lat": 48.89839295328539,
+    "lon": 2.3593939011158844,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1866281
+  },
+  {
+    "name": "Porte de la Villette",
+    "lat": 48.89738989158187,
+    "lon": 2.385508387668673,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2706288
+  },
+  {
+    "name": "Porte de Montreuil",
+    "lat": 48.853772788014886,
+    "lon": 2.4118948370564355,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3067413
+  },
+  {
+    "name": "Porte de Pantin",
+    "lat": 48.88841747876783,
+    "lon": 2.3917844509634323,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3374733
+  },
+  {
+    "name": "Porte de Saint-Cloud",
+    "lat": 48.83796121353705,
+    "lon": 2.257122229845437,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3485946
+  },
+  {
+    "name": "Porte de Saint-Ouen",
+    "lat": 48.89737479552952,
+    "lon": 2.3289428127798932,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2710638
+  },
+  {
+    "name": "Porte de Vanves",
+    "lat": 48.82770461172182,
+    "lon": 2.305340930810601,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3395358
+  },
+  {
+    "name": "Porte de Versailles",
+    "lat": 48.83260119243559,
+    "lon": 2.288252677414912,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3268157
+  },
+  {
+    "name": "Porte de Vincennes",
+    "lat": 48.847335584614896,
+    "lon": 2.408089407236094,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5446602
+  },
+  {
+    "name": "Porte des Lilas",
+    "lat": 48.87721366043972,
+    "lon": 2.406609865120692,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3bis",
+        "long": "Metro 3bis",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3B",
+        "long": "Tram 3B",
+        "color": "#009A93",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3105016
+  },
+  {
+    "name": "Porte Dorée",
+    "lat": 48.83476445992777,
+    "lon": 2.4053493429496022,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "3A",
+        "long": "Tram 3A",
+        "color": "#EB6909",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1918182
+  },
+  {
+    "name": "Pré Saint-Gervais",
+    "lat": 48.880271957029535,
+    "lon": 2.3984681722681724,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7bis",
+        "long": "Metro 7bis",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 282626
+  },
+  {
+    "name": "Pyramides",
+    "lat": 48.86576110282936,
+    "lon": 2.3344274859130447,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3962698
+  },
+  {
+    "name": "Pyrénées",
+    "lat": 48.87388185415816,
+    "lon": 2.385316215101792,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2288587
+  },
+  {
+    "name": "Père Lachaise",
+    "lat": 48.86294983304259,
+    "lon": 2.3874349509990833,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3465307
+  },
+  {
+    "name": "Quai de la Gare",
+    "lat": 48.83704512015793,
+    "lon": 2.3728257245425723,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1735465
+  },
+  {
+    "name": "Quai de la Rapée",
+    "lat": 48.8464846505702,
+    "lon": 2.36591010685298,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 798728
+  },
+  {
+    "name": "Quatre Septembre",
+    "lat": 48.869637996887164,
+    "lon": 2.3362327568689163,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1165004
+  },
+  {
+    "name": "Rambuteau",
+    "lat": 48.861204990323024,
+    "lon": 2.3534957401281624,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2127291
+  },
+  {
+    "name": "Ranelagh",
+    "lat": 48.85548504950516,
+    "lon": 2.2701091389544903,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1779206
+  },
+  {
+    "name": "Raspail",
+    "lat": 48.83896428071056,
+    "lon": 2.3307541920862156,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1238357
+  },
+  {
+    "name": "Rennes",
+    "lat": 48.84845784854179,
+    "lon": 2.3277821271475343,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 861334
+  },
+  {
+    "name": "Reuilly-Diderot",
+    "lat": 48.84735451689955,
+    "lon": 2.3868084457779952,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4580091
+  },
+  {
+    "name": "Richard Lenoir",
+    "lat": 48.859873621665606,
+    "lon": 2.371913978759671,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1544636
+  },
+  {
+    "name": "Richelieu-Drouot",
+    "lat": 48.87201346376477,
+    "lon": 2.340051785735736,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2994510
+  },
+  {
+    "name": "Riquet",
+    "lat": 48.88796756174982,
+    "lon": 2.3734568878525493,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1588438
+  },
+  {
+    "name": "Robespierre",
+    "lat": 48.855726428633155,
+    "lon": 2.4229832161458753,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2986308
+  },
+  {
+    "name": "Romainville - Carnot",
+    "lat": 48.8831359021221,
+    "lon": 2.44082220524926,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Rome",
+    "lat": 48.88233342370702,
+    "lon": 2.3218017310631685,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1696331
+  },
+  {
+    "name": "Rosny-Bois-Perrier",
+    "lat": 48.882628927347035,
+    "lon": 2.4809020667391297,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "E",
+        "long": "RER E",
+        "color": "#C24193",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Rue de la Pompe",
+    "lat": 48.86394013069539,
+    "lon": 2.2784416488331494,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2449458
+  },
+  {
+    "name": "Rue des Boulets",
+    "lat": 48.852168369650244,
+    "lon": 2.3896255399759547,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1832442
+  },
+  {
+    "name": "Rue du Bac",
+    "lat": 48.85519632481491,
+    "lon": 2.325815566511529,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1423364
+  },
+  {
+    "name": "Réaumur Sébastopol",
+    "lat": 48.86623513300041,
+    "lon": 2.3525493043985444,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3579544
+  },
+  {
+    "name": "République",
+    "lat": 48.8675031404076,
+    "lon": 2.3638252831598514,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 11079708
+  },
+  {
+    "name": "Saint-Ambroise",
+    "lat": 48.86147646373029,
+    "lon": 2.373943508245182,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2158466
+  },
+  {
+    "name": "Saint-Augustin",
+    "lat": 48.87447567664767,
+    "lon": 2.322001788877926,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1934106
+  },
+  {
+    "name": "Saint-Denis - Porte de Paris",
+    "lat": 48.92993589058523,
+    "lon": 2.3560357955264504,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "8",
+        "long": "Tram 8",
+        "color": "#96BB1F",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3355836
+  },
+  {
+    "name": "Saint-Denis - Université",
+    "lat": 48.94586727214251,
+    "lon": 2.3646364825042263,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3569990
+  },
+  {
+    "name": "Saint-Denis – Pleyel",
+    "lat": 48.91746894101899,
+    "lon": 2.3465446215359846,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Saint-Fargeau",
+    "lat": 48.87210144213156,
+    "lon": 2.4045149423791043,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3bis",
+        "long": "Metro 3bis",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 472258
+  },
+  {
+    "name": "Saint-François-Xavier",
+    "lat": 48.851441709238905,
+    "lon": 2.3144081214488232,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1213378
+  },
+  {
+    "name": "Saint-Georges",
+    "lat": 48.87817339105656,
+    "lon": 2.337857510381017,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 751555
+  },
+  {
+    "name": "Saint-Germain-des-Prés",
+    "lat": 48.853718934000206,
+    "lon": 2.3337761382184676,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2378860
+  },
+  {
+    "name": "Saint-Jacques",
+    "lat": 48.8329008156678,
+    "lon": 2.3371351947060397,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1407837
+  },
+  {
+    "name": "Saint-Lazare",
+    "lat": 48.87593315237684,
+    "lon": 2.3257279613877033,
+    "lines": [
+      {
+        "mode": "TRAIN",
+        "short": "J",
+        "long": "Transilien J",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "TRAIN",
+        "short": "L",
+        "long": "Transilien L",
+        "color": "#556E9C",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "E",
+        "long": "RER E",
+        "color": "#C24193",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 33128384
+  },
+  {
+    "name": "Saint-Mandé",
+    "lat": 48.846423077287035,
+    "lon": 2.4187597866986716,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3944640
+  },
+  {
+    "name": "Saint-Marcel",
+    "lat": 48.838427296060985,
+    "lon": 2.360967166347492,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1666744
+  },
+  {
+    "name": "Saint-Maur",
+    "lat": 48.864285758645295,
+    "lon": 2.379741893177554,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2004445
+  },
+  {
+    "name": "Saint-Michel",
+    "lat": 48.85333579289228,
+    "lon": 2.3460349858516385,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "B",
+        "long": "RER B",
+        "color": "#5091CB",
+        "text": "#fff"
+      },
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3747385
+  },
+  {
+    "name": "Saint-Ouen",
+    "lat": 48.9045663899011,
+    "lon": 2.3226263683342268,
+    "lines": [
+      {
+        "mode": "RER",
+        "short": "C",
+        "long": "RER C",
+        "color": "#FFCD00",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3420852
+  },
+  {
+    "name": "Saint-Paul",
+    "lat": 48.855236252795095,
+    "lon": 2.3609564886610004,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4295823
+  },
+  {
+    "name": "Saint-Philippe du Roule",
+    "lat": 48.872045861820176,
+    "lon": 2.310018931056925,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1935004
+  },
+  {
+    "name": "Saint-Placide",
+    "lat": 48.84687823795215,
+    "lon": 2.326792785039298,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2391205
+  },
+  {
+    "name": "Saint-Sulpice",
+    "lat": 48.851071370372,
+    "lon": 2.3307007099542143,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1571987
+  },
+  {
+    "name": "Saint-Sébastien-Froissart",
+    "lat": 48.86116886548781,
+    "lon": 2.367210866411708,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1151192
+  },
+  {
+    "name": "Sentier",
+    "lat": 48.86751302499845,
+    "lon": 2.346552336353212,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2222744
+  },
+  {
+    "name": "Serge Gainsbourg",
+    "lat": 48.881316062234305,
+    "lon": 2.4271855777339173,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Simplon",
+    "lat": 48.894343848842425,
+    "lon": 2.347430779960205,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2056501
+  },
+  {
+    "name": "Solférino",
+    "lat": 48.85849912371638,
+    "lon": 2.323167611246745,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1269143
+  },
+  {
+    "name": "Stalingrad",
+    "lat": 48.88432566304799,
+    "lon": 2.3673720385654686,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 4924583
+  },
+  {
+    "name": "Strasbourg-Saint-Denis",
+    "lat": 48.86929400766137,
+    "lon": 2.3542808790753766,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 6345770
+  },
+  {
+    "name": "Sully-Morland",
+    "lat": 48.85162059096899,
+    "lon": 2.3615249655078383,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1124169
+  },
+  {
+    "name": "Sèvres-Babylone",
+    "lat": 48.85137882974709,
+    "lon": 2.3269352447531624,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3392504
+  },
+  {
+    "name": "Sèvres-Lecourbe",
+    "lat": 48.84562696675504,
+    "lon": 2.3095314928235138,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1257040
+  },
+  {
+    "name": "Ségur",
+    "lat": 48.84706613315245,
+    "lon": 2.3074022406196404,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1100151
+  },
+  {
+    "name": "Temple",
+    "lat": 48.866514461743,
+    "lon": 2.3608035032752688,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 891858
+  },
+  {
+    "name": "Ternes",
+    "lat": 48.877972701427545,
+    "lon": 2.2983103751249425,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2292256
+  },
+  {
+    "name": "Thiais - Orly",
+    "lat": 48.746978700693774,
+    "lon": 2.372839696785623,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Tolbiac",
+    "lat": 48.82642601087568,
+    "lon": 2.357245650758686,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2287918
+  },
+  {
+    "name": "Trinité d'Estienne d'Orves",
+    "lat": 48.87633026495961,
+    "lon": 2.333108893760544,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1051982
+  },
+  {
+    "name": "Trocadéro",
+    "lat": 48.86307378222526,
+    "lon": 2.287166875502502,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "6",
+        "long": "Metro 6",
+        "color": "#83C491",
+        "text": "#000"
+      },
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 5284134
+  },
+  {
+    "name": "Tuileries",
+    "lat": 48.86434377873392,
+    "lon": 2.330129877112862,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "1",
+        "long": "Metro 1",
+        "color": "#FFCD00",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1859552
+  },
+  {
+    "name": "Télégraphe",
+    "lat": 48.87547445759212,
+    "lon": 2.3988675993418465,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "11",
+        "long": "Metro 11",
+        "color": "#8D5E2A",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1636898
+  },
+  {
+    "name": "Vaneau",
+    "lat": 48.84881637247032,
+    "lon": 2.32125786290546,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 725826
+  },
+  {
+    "name": "Varenne",
+    "lat": 48.85687137924919,
+    "lon": 2.315056637317088,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "13",
+        "long": "Metro 13",
+        "color": "#98D4E2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 782697
+  },
+  {
+    "name": "Vaugirard",
+    "lat": 48.839516585394534,
+    "lon": 2.301107514879988,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2482886
+  },
+  {
+    "name": "Vavin",
+    "lat": 48.84221841361353,
+    "lon": 2.329008926235403,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1322588
+  },
+  {
+    "name": "Victor Hugo",
+    "lat": 48.86979855646069,
+    "lon": 2.2853350946861695,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 2801041
+  },
+  {
+    "name": "Villejuif - Gustave Roussy",
+    "lat": 48.79305491267365,
+    "lon": 2.34936523945399,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "14",
+        "long": "Metro 14",
+        "color": "#662483",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3098465
+  },
+  {
+    "name": "Villejuif - Léo Lagrange",
+    "lat": 48.80468812091137,
+    "lon": 2.3639531966021656,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1952627
+  },
+  {
+    "name": "Villejuif Paul Vaillant-Couturier",
+    "lat": 48.79648308455054,
+    "lon": 2.3682695400496945,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      }
+    ],
+    "trafic": 1764879
+  },
+  {
+    "name": "Villejuif-Louis Aragon",
+    "lat": 48.78756279205351,
+    "lon": 2.3678041069754565,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "7",
+        "long": "Metro 7",
+        "color": "#F3A4BA",
+        "text": "#000"
+      },
+      {
+        "mode": "TRAM",
+        "short": "7",
+        "long": "Tram 7",
+        "color": "#6E1E78",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 5218070
+  },
+  {
+    "name": "Villiers",
+    "lat": 48.881094427166275,
+    "lon": 2.3147210047461946,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "2",
+        "long": "Metro 2",
+        "color": "#0064B0",
+        "text": "#fff"
+      },
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 3586376
+  },
+  {
+    "name": "Volontaires",
+    "lat": 48.841505522367974,
+    "lon": 2.3079486793367505,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "12",
+        "long": "Metro 12",
+        "color": "#00814F",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1734848
+  },
+  {
+    "name": "Voltaire",
+    "lat": 48.85787849486676,
+    "lon": 2.3800206442479825,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "9",
+        "long": "Metro 9",
+        "color": "#D5C900",
+        "text": "#000"
+      }
+    ],
+    "trafic": 3454006
+  },
+  {
+    "name": "Wagram",
+    "lat": 48.88380920123339,
+    "lon": 2.304674440528396,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "3",
+        "long": "Metro 3",
+        "color": "#9F9825",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1508617
+  },
+  {
+    "name": "École Militaire",
+    "lat": 48.85489056687858,
+    "lon": 2.3064034857365168,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2805976
+  },
+  {
+    "name": "École Vétérinaire de Maisons-Alfort",
+    "lat": 48.81480300700047,
+    "lon": 2.422376142845623,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "8",
+        "long": "Metro 8",
+        "color": "#CEADD2",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2269487
+  },
+  {
+    "name": "Église d'Auteuil",
+    "lat": 48.84715005570978,
+    "lon": 2.269135872730268,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "10",
+        "long": "Metro 10",
+        "color": "#E3B32A",
+        "text": "#000"
+      }
+    ],
+    "trafic": 124941
+  },
+  {
+    "name": "Église de Pantin",
+    "lat": 48.893149985759834,
+    "lon": 2.412763044547627,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "5",
+        "long": "Metro 5",
+        "color": "#F28E42",
+        "text": "#000"
+      }
+    ],
+    "trafic": 2832467
+  },
+  {
+    "name": "Étienne Marcel",
+    "lat": 48.863972478817246,
+    "lon": 2.3496175641598405,
+    "lines": [
+      {
+        "mode": "METRO",
+        "short": "4",
+        "long": "Metro 4",
+        "color": "#C04191",
+        "text": "#fff"
+      }
+    ],
+    "trafic": 1705639
+  }
+]
