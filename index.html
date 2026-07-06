@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Metroooooo</title>
         <link rel="stylesheet" href="style.css" />
         <link
@@ -23,6 +24,28 @@
             <div id="output"></div>
         </div>
 
+        <div id="options" class="optionsContainer">
+            <label class="option">
+                <input type="checkbox" id="streetsNamesOption" />
+                Afficher les noms des rues
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="mapRotationOption" />
+                Orienter la carte au nord
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="linesOption" />
+                Afficher les lignes
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="neighboursOption" />
+                Afficher les stations voisines
+            </label>
+        </div>
+
         <div class="mapContainer">
             <div class="mapCircle">
                 <div id="map"></div>
@@ -42,17 +65,7 @@
 
         <div id="attempts" class="attemptsContainer"></div>
 
-        <div id="options" class="optionsContainer">
-            <label class="option">
-                <input type="checkbox" id="streetsNamesOption" />
-                Afficher les noms des rues
-            </label>
-
-            <label class="option">
-                <input type="checkbox" id="mapRotationOption" />
-                Orienter la carte au nord
-            </label>
-        </div>
+        
 
         <script src="game.js"></script>
     </body>
