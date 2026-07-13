@@ -20,29 +20,23 @@
     </head>
     <body>
         <div class="headerContainer">
-            Jeu du metro :
+            Jeu du metro
             <div id="output"></div>
         </div>
 
         <div id="options" class="optionsContainer">
             <label class="option">
-                <input type="checkbox" id="streetsNamesOption" />
-                Afficher les noms des rues
+                <button id="mapRotationOption" class="option-btn">Orienter la carte au nord</button> <span style="color: red;">-50</span>
             </label>
-
+        
             <label class="option">
-                <input type="checkbox" id="mapRotationOption" />
-                Orienter la carte au nord
+                <button id="streetsNamesOption" class="option-btn">Afficher les noms des rues</button><span style="color: red;">-50</span>
+            </label>          
+            <label class="option">
+                <button id="linesOption" class="option-btn">Afficher les lignes</button> <span style="color: red;">-100</span>
             </label>
-
             <label class="option">
-                <input type="checkbox" id="linesOption" />
-                Afficher les lignes
-            </label>
-
-            <label class="option">
-                <input type="checkbox" id="neighboursOption" />
-                Afficher les stations voisines
+                <button id="neighboursOption" class="option-btn">Afficher les stations voisines</button> <span style="color: red;">-100</span>
             </label>
         </div>
 

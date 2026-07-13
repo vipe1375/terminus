@@ -173,9 +173,9 @@ class Handler(BaseHTTPRequestHandler):
         cfg = load_config()
         target = target_for(day)
         neighbours = [
-            {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"]}
+            {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"], "name": s["name"]}
             for s in STATIONS
-            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= cfg["radiusMeters"]
+            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= 1000
         ]
         self._send_json({
             "date": day.isoformat(),

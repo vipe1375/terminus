@@ -1,9 +1,16 @@
 Jeu du métro
 
 ## À venir
-- page `admin` et station quotidienne
-- sauvegarde de la progression
 - système de points en fonction du nombre d'indices
+
+## v0.0.5
+### Nouveautés
+- nom des stations voisines
+### Changements
+- préférences utilisateur supprimées au profit d'un système d'indices
+- fix d'un bug dans le déplacement de la carte
+- fix de la distance d'affichage des stations voisines
+- police du titre du jeu
 
 ## v0.0.4
 ### Nouveautés

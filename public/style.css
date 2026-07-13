@@ -5,11 +5,16 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+@font-face {
+  font-family: 'Special Elite';
+  src: url('./fonts/SpecialElite-Regular.ttf') format('truetype');
+}
 .headerContainer {
     display: flex;
     justify-content: center;
     padding: 20px 0;
     font-size: 20pt;
+    font-family: 'Special Elite', monospace;
 }
 .mapContainer {
     display: flex;
@@ -25,7 +30,7 @@ body {
 }
 .optionsContainer {
     margin-top: 20px;
-    width: 220px;
+    width: 300px;
     max-height: 30vh;
     overflow-y: auto;
     display: flex;
@@ -40,6 +45,15 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+.option-btn {
+    background-color: DodgerBlue;
+        color: #fff;
+}
+.option-btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
 }
 .attemptsContainer {
     margin-top: 20px;

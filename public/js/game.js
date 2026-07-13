@@ -19,11 +19,26 @@ let endGame = false;
 
 /* --- Sauvegarde locale, une partie par jour --- */
 const storeKey = (date) => `metro-du-jour:${date}`;
+const optionIds = [
+  "streetsNamesOption",
+  "linesOption",
+  "neighboursOption",
+  "mapRotationOption",
+];
+const actionsByOptionId = {
+  streetsNamesOption: changeStreetsNamesState,
+  linesOption: changeLinesState,
+  neighboursOption: changeNeighboursState,
+  mapRotationOption: rotateMap,
+};
 
 function saveProgress() {
+  const usedOptions = optionIds.filter(
+    (id) => document.getElementById(id).disabled
+  );
   localStorage.setItem(
     storeKey(dailyDate),
-    JSON.stringify({ guesses, endGame, revealedName: currentStation.name })
+    JSON.stringify({ guesses, endGame, revealedName: currentStation.name, usedOptions })
   );
 }
 
@@ -48,26 +63,6 @@ async function loadStationNames() {
 async function loadDaily() {
   const response = await fetch("/api/daily");
   return response.json();
-}
-
-const prefsKey = "metro-du-jour:prefs";
-
-function savePrefs() {
-  localStorage.setItem(prefsKey, JSON.stringify({
-    streetNames: document.getElementById("streetsNamesOption").checked,
-    lines: document.getElementById("linesOption").checked,
-    neighbours: document.getElementById("neighboursOption").checked,
-    rotation: document.getElementById("mapRotationOption").checked,
-  }));
-}
-
-function loadPrefs() {
-  const saved = JSON.parse(localStorage.getItem(prefsKey) || "null");
-  if (!saved) return;
-  document.getElementById("streetsNamesOption").checked = saved.streetNames;
-  document.getElementById("linesOption").checked = saved.lines;
-  document.getElementById("neighboursOption").checked = saved.neighbours;
-  document.getElementById("mapRotationOption").checked = saved.rotation;
 }
 
 function zoomForRadius(lat, radiusMeters, sizePx) {
@@ -118,14 +113,20 @@ function initMap() {
 
   const center = L.latLng(lat, lon);
 
+  let isCorrectingPan = false;
+  
   map.on("moveend drag", () => {
+    if (isCorrectingPan) return;
+  
     const c = map.getCenter();
     const dist = center.distanceTo(c);
     if (dist > maxRadius) {
+      isCorrectingPan = true;
       const ratio = maxRadius / dist;
       const newLat = center.lat + (c.lat - center.lat) * ratio;
       const newLng = center.lng + (c.lng - center.lng) * ratio;
       map.panTo([newLat, newLng], { animate: false });
+      isCorrectingPan = false;
     }
   });
   
@@ -235,61 +236,53 @@ function autocomplete(inp, arr) {
 }
 
 function changeStreetsNamesState() {
-  const checked = document.getElementById("streetsNamesOption").checked;
-
   map.removeLayer(tileLayer);
-
-  tileLayer = L.tileLayer(checked ? tilesStreetsNamed : tilesStreets, {
+  tileLayer = L.tileLayer(tilesStreetsNamed, {
     maxZoom,
     minZoom: dynamicMinZoom,
   }).addTo(map);
 }
 
 function rotateMap() {
-  const checked = document.getElementById("mapRotationOption").checked;
-  if (checked) {
-    map.setBearing(0);
-  } else {
-    map.setBearing(mapRotation);
-  }
+  map.setBearing(0);
 }
 
 let linesMarker = null;
 let neighboursMarkers = [];
 
 function changeNeighboursState() {
-  const checked = document.getElementById("neighboursOption").checked;
-
   if (neighboursMarkers.length) {
     neighboursMarkers.forEach((m) => map.removeLayer(m));
     neighboursMarkers = [];
   }
 
-  if (checked) {
-    dailyNeighbours.forEach((n) => {
-      if (!n.lines || !n.lines.length) return;
-      const html = document.createElement("div");
-      html.appendChild(badgesEl(n.lines));
+  dailyNeighbours.forEach((n) => {
+    if (!n.lines || !n.lines.length) return;
+    if (n.lon == currentStation.lon && n.lat == currentStation.lat) return;
+    const html = document.createElement("div");
+    html.appendChild(badgesEl(n.lines));
 
-      neighboursMarkers.push(
-        L.marker([n.lat, n.lon], {
-          icon: L.divIcon({ className: "", html: html.outerHTML, iconSize: null }),
-          interactive: false,
-        }).addTo(map)
-      );
-    });
-  }
+    const label = document.createElement("span");
+    label.textContent = n.name;
+    label.style.marginLeft = "4px";
+    html.appendChild(label);
+
+    neighboursMarkers.push(
+      L.marker([n.lat, n.lon], {
+        icon: L.divIcon({ className: "", html: html.outerHTML, iconSize: null }),
+        interactive: false,
+      }).addTo(map)
+    );
+  });
 }
 
 function changeLinesState() {
-  const checked = document.getElementById("linesOption").checked;
-
   if (linesMarker) {
     map.removeLayer(linesMarker);
     linesMarker = null;
   }
 
-  if (!checked || !currentStation.lines || !currentStation.lines.length) return;
+  if (!currentStation.lines || !currentStation.lines.length) return;
 
   const html = document.createElement("div");
   html.appendChild(badgesEl(currentStation.lines));
@@ -317,6 +310,14 @@ function badgesEl(lines) {
   return wrap;
 }
 
+function useOnce(button, action) {
+  button.addEventListener("click", () => {
+    action();
+    button.disabled = true;
+    saveProgress();
+  });
+}
+
 /* INIT GLOBAL */
 async function init() {
   await loadStationNames();
@@ -328,17 +329,7 @@ async function init() {
   maxRadius = daily.radiusMeters;
   maxGuesses = daily.maxGuesses;
 
-  document.getElementById("streetsNamesOption").checked = daily.defaults.streetNames;
-  document.getElementById("linesOption").checked = daily.defaults.lines;
-  document.getElementById("neighboursOption").checked = daily.defaults.neighbours;
-  document.getElementById("mapRotationOption").checked = daily.defaults.rotation;
-
-  loadPrefs(); // écrase avec les préférences sauvegardées du joueur, si présentes
-
   initMap();
-  changeLinesState();
-  changeStreetsNamesState();
-  changeNeighboursState();
 
   const saved = loadProgress(dailyDate);
   if (saved) {
@@ -349,6 +340,12 @@ async function init() {
       document.getElementById("output").textContent = saved.revealedName;
     }
     if (endGame) document.getElementById("guessForm").style.display = "none";
+
+    (saved.usedOptions || []).forEach((id) => {
+      const btn = document.getElementById(id);
+      btn.disabled = true;
+      actionsByOptionId[id]();
+    });
   }
 
   autocomplete(document.getElementById("guess"), stationsNames);
@@ -360,33 +357,10 @@ async function init() {
 
   renderAttempts();
 
-  document
-    .getElementById("streetsNamesOption")
-    .addEventListener("change", () => {
-      changeStreetsNamesState();
-      savePrefs();
-    });
-
-  document
-    .getElementById("mapRotationOption")
-    .addEventListener("change", () => {
-      rotateMap();
-      savePrefs();
-    });
-
-  document
-    .getElementById("linesOption")
-    .addEventListener("change", () => {
-      changeLinesState();
-      savePrefs();
-    });
-
-  document
-    .getElementById("neighboursOption")
-    .addEventListener("change", () => {
-      changeNeighboursState();
-      savePrefs();
-    });
+  useOnce(document.getElementById("streetsNamesOption"), changeStreetsNamesState);
+  useOnce(document.getElementById("mapRotationOption"), rotateMap);
+  useOnce(document.getElementById("linesOption"), changeLinesState);
+  useOnce(document.getElementById("neighboursOption"), changeNeighboursState);
 }
 
 init();
