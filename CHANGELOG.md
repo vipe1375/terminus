@@ -2,6 +2,15 @@ Jeu du métro
 
 ## À venir
 - système de points en fonction du nombre d'indices
+- écran de fin
+- tutoriel pour les nouveaux utilisateurs
+- reinitialisation de la station quotidienne sur la page admin
+- refonte de la page admin
+- ajout des copyrights et licences
+## v0.0.6
+## Changements
+- polices et couleurs de l'interface
+- maximum de suggestions affichées
 
 ## v0.0.5
 ### Nouveautés

@@ -17,6 +17,8 @@ let map = null;
 let mapRotation = null;
 let endGame = false;
 
+const maxSuggestions = 5;
+
 /* --- Sauvegarde locale, une partie par jour --- */
 const storeKey = (date) => `metro-du-jour:${date}`;
 const optionIds = [
@@ -158,7 +160,7 @@ async function guess() {
 
   if (res.name) {
     currentStation.name = res.name;
-    document.getElementById("output").textContent = res.name;
+    // document.getElementById("output").textContent = res.name;
   }
 
   if (res.correct || guesses.length == maxGuesses) {
@@ -209,8 +211,11 @@ function autocomplete(inp, arr) {
     a.className = "autocomplete-items";
     this.parentNode.appendChild(a);
 
-    for (i = 0; i < arr.length; i++) {
+    let nSuggestions = 0;
+
+    for (i = 0; (i < arr.length && nSuggestions < maxSuggestions); i++) {
       if (arr[i].substr(0, val.length).toLowerCase() === val.toLowerCase()) {
+        nSuggestions += 1;
         b = document.createElement("div");
         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
         b.innerHTML += arr[i].substr(val.length);
@@ -265,6 +270,7 @@ function changeNeighboursState() {
     const label = document.createElement("span");
     label.textContent = n.name;
     label.style.marginLeft = "4px";
+    label.className = "station-label";
     html.appendChild(label);
 
     neighboursMarkers.push(
@@ -337,7 +343,8 @@ async function init() {
     endGame = !!saved.endGame;
     if (saved.revealedName) {
       currentStation.name = saved.revealedName;
-      document.getElementById("output").textContent = saved.revealedName;
+      // TODO : écran de fin
+      // document.getElementById("output").textContent = saved.revealedName;
     }
     if (endGame) document.getElementById("guessForm").style.display = "none";
 
