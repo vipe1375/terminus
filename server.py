@@ -21,10 +21,13 @@ PUBLIC = os.path.join(ROOT, "public")
 STATIONS_PATH = os.path.join(ROOT, "data", "stations_merged.json")
 
 PORT = int(os.environ.get("PORT", "8000"))
-MAX_RADIUS = 500     # metres, doit matcher maxRadius dans game.js
-MAX_GUESSES = 6       # doit matcher la limite dans game.js
 
-DAILY_SEED = 20240101
+# Reglages figes
+RADIUS_METERS = 500      # rayon de la zone autorisee (doit matcher game.js)
+MAX_GUESSES = 6          # nombre d'essais
+NEIGHBOUR_RADIUS = 1000  # rayon de recherche des stations voisines
+
+DAILY_SEED = os.environ.get("DAILY_SEED")
 EPOCH = date(2024, 1, 1)
 
 CONTENT_TYPES = {
@@ -37,33 +40,6 @@ with open(STATIONS_PATH, encoding="utf-8") as f:
 
 _DAILY_ORDER = list(range(len(STATIONS)))
 random.Random(DAILY_SEED).shuffle(_DAILY_ORDER)
-
-CONFIG_PATH = os.path.join(ROOT, "data", "config.json")
-ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "admin")
-
-CONFIG_DEFAULTS = {
-    "radiusMeters": 500,
-    "maxGuesses": 6,
-    "defaultStreetNames": False,
-    "defaultLines": False,
-    "defaultNeighbours": False,
-    "defaultRotation": True,
-}
-
-def load_config():
-    cfg = dict(CONFIG_DEFAULTS)
-    if os.path.exists(CONFIG_PATH):
-        try:
-            with open(CONFIG_PATH, encoding="utf-8") as f:
-                cfg.update({k: v for k, v in json.load(f).items() if k in CONFIG_DEFAULTS})
-        except (ValueError, OSError):
-            pass
-    return cfg
-
-def save_config(cfg):
-    os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
-    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
-        json.dump(cfg, f, ensure_ascii=False, indent=2)
 
 
 def normalize(name):
@@ -135,75 +111,44 @@ class Handler(BaseHTTPRequestHandler):
 
         if path == "/":
             return self._send_file("index.html")
-        if path == "/api/config":
-            return self._send_json(load_config())
         if path == "/api/daily":
             return self._daily(date.today())
         if path == "/api/stations":
             return self._send_json([s["name"] for s in STATIONS])
-        if path in ("/admin", "/admin/"):
-            return self._send_file("admin.html")
         return self._send_file(path.lstrip("/"))
 
     def do_POST(self):
         if urlparse(self.path).path == "/api/guess":
             return self._guess(self._read_json_body())
-        if urlparse(self.path).path == "/api/admin/config":
-            return self._admin_save(self._read_json_body())
         return self._send_json({"error": "not found"}, 404)
 
-    def _admin_save(self, body):
-        if body.get("password") != ADMIN_PASSWORD:
-            return self._send_json({"error": "unauthorized"}, 401)
-        cfg = load_config()
-        try:
-            if "radiusMeters" in body:
-                cfg["radiusMeters"] = max(100, min(50000, int(body["radiusMeters"])))
-            if "maxGuesses" in body:
-                cfg["maxGuesses"] = max(1, min(12, int(body["maxGuesses"])))
-            for key in ("defaultStreetNames", "defaultLines", "defaultNeighbours", "defaultRotation"):
-                if key in body:
-                    cfg[key] = bool(body[key])
-        except (ValueError, TypeError):
-            return self._send_json({"error": "invalid_values"}, 400)
-        save_config(cfg)
-        self._send_json({"ok": True, "config": cfg})
-
     def _daily(self, day):
-        cfg = load_config()
         target = target_for(day)
         neighbours = [
             {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"], "name": s["name"]}
             for s in STATIONS
-            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= 1000
+            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= NEIGHBOUR_RADIUS
         ]
         self._send_json({
             "date": day.isoformat(),
             "lat": target["lat"], "lon": target["lon"], "lines": target["lines"],
             "neighbours": neighbours,
-            "radiusMeters": cfg["radiusMeters"],
-            "maxGuesses": cfg["maxGuesses"],
-            "defaults": {
-                "streetNames": cfg["defaultStreetNames"],
-                "lines": cfg["defaultLines"],
-                "neighbours": cfg["defaultNeighbours"],
-                "rotation": cfg["defaultRotation"],
-            },
+            "radiusMeters": RADIUS_METERS,
+            "maxGuesses": MAX_GUESSES,
         })
-    
+
     def _guess(self, body):
-        cfg = load_config()
-        day = parse_date(body.get("date"))
+        day = date.today()  # au lieu de parse_date(body.get("date"))
         attempt = int(body.get("attempt") or 0)
         guess = NORM_INDEX.get(normalize(body.get("name", "")))
         if not guess:
             return self._send_json({"error": "unknown_station"}, 400)
-    
+
         target = target_for(day)
         correct = normalize(guess["name"]) == normalize(target["name"])
-    
+
         res = {"correct": correct}
-        if correct or attempt + 1 >= cfg["maxGuesses"]:
+        if correct or attempt + 1 >= MAX_GUESSES:
             res["name"] = target["name"]
         self._send_json(res)
 

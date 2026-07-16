@@ -3,18 +3,17 @@ let dynamicMinZoom = null;
 let maxRadius = 500;
 let maxGuesses = 6;
 
-const tilesStreets =
-  "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png";
-const tilesStreetsNamed =
-  "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-let tileLayer = null;
+// Style vectoriel libre (OpenFreeMap). Les libellés sont masqués au départ
+// et réaffichés via l'option "noms des rues".
+const mapStyle = "https://tiles.openfreemap.org/styles/positron";
+let labelLayerIds = [];
+
 let currentStation = null; // { lat, lon, lines, name } — name reste null tant que non révélé
 let dailyDate = null;
 let dailyNeighbours = [];
 let stationsNames = null;
 const guesses = [];
 let map = null;
-let mapRotation = null;
 let endGame = false;
 let points = 500;
 
@@ -69,60 +68,68 @@ function zoomForRadius(lat, radiusMeters, sizePx) {
   return Math.log2(worldMpp / targetMpp);
 }
 
+function distanceMeters(lat1, lon1, lat2, lon2) {
+  const R = 6371000;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+// Renvoie une promesse résolue quand le style est chargé.
 function initMap() {
   const lat = currentStation.lat;
   const lon = currentStation.lon;
 
-  mapRotation = Math.random() * 360;
-
   const sizePx = document.getElementById("map").clientWidth || 300;
   const zoom = Math.min(maxZoom, zoomForRadius(lat, maxRadius, sizePx));
+  dynamicMinZoom = zoom - 1.5;
 
-  map = L.map("map", {
-    zoomControl: false,
-    rotate: true,
-    touchRotate: true,
-    inertia: false,
-    zoomSnap: 0.1,
-  }).setView([lat, lon], zoom);
-
-  dynamicMinZoom = Math.floor(zoom);
-  tileLayer = L.tileLayer(tilesStreets, {
-    maxZoom,
+  map = new maplibregl.Map({
+    container: "map",
+    style: mapStyle,
+    center: [lon, lat], // MapLibre attend [lng, lat]
+    zoom,
     minZoom: dynamicMinZoom,
-  }).addTo(map);
+    maxZoom,
+    bearing: Math.random() * 360,
+    attributionControl: false,
+  });
 
-  const circle = L.circle([lat, lon], {
-    radius: maxRadius,
-    stroke: false,
-    fill: false,
-  }).addTo(map);
+  new maplibregl.Marker().setLngLat([lon, lat]).addTo(map);
 
-  marker = L.marker([lat, lon]).addTo(map);
-
-  // map.setMaxBounds(circle.getBounds());
-  // map.options.maxBoundsViscosity = 1.0;
-
-  const center = L.latLng(lat, lon);
-
-  let isCorrectingPan = false;
-  
-  map.on("moveend drag", () => {
-    if (isCorrectingPan) return;
-  
+  // Empêche de s'éloigner de plus de maxRadius de la station.
+  let correcting = false;
+  map.on("move", () => {
+    if (correcting) return;
     const c = map.getCenter();
-    const dist = center.distanceTo(c);
+    const dist = distanceMeters(lat, lon, c.lat, c.lng);
     if (dist > maxRadius) {
-      isCorrectingPan = true;
+      correcting = true;
       const ratio = maxRadius / dist;
-      const newLat = center.lat + (c.lat - center.lat) * ratio;
-      const newLng = center.lng + (c.lng - center.lng) * ratio;
-      map.panTo([newLat, newLng], { animate: false });
-      isCorrectingPan = false;
+      const newLat = lat + (c.lat - lat) * ratio;
+      const newLng = lon + (c.lng - lon) * ratio;
+      map.setCenter([newLng, newLat]);
+      correcting = false;
     }
   });
-  
-  map.setBearing(mapRotation);
+
+  return new Promise((resolve) => {
+    map.on("load", () => {
+      labelLayerIds = map
+        .getStyle()
+        .layers.filter((l) => l.type === "symbol")
+        .map((l) => l.id);
+      labelLayerIds.forEach((id) =>
+        map.setLayoutProperty(id, "visibility", "none")
+      );
+      resolve();
+    });
+  });
 }
 
 async function guess() {
@@ -149,7 +156,10 @@ async function guess() {
 
   if (res.name) {
     currentStation.name = res.name;
-    // document.getElementById("output").textContent = res.name;
+  }
+
+  if (!res.correct) {
+    updatePoints(10)
   }
 
   if (res.correct || guesses.length == maxGuesses) {
@@ -202,7 +212,7 @@ function autocomplete(inp, arr) {
 
     let nSuggestions = 0;
 
-    for (i = 0; (i < arr.length && nSuggestions < maxSuggestions); i++) {
+    for (i = 0; i < arr.length && nSuggestions < maxSuggestions; i++) {
       if (arr[i].substr(0, val.length).toLowerCase() === val.toLowerCase()) {
         nSuggestions += 1;
         b = document.createElement("div");
@@ -230,65 +240,65 @@ function autocomplete(inp, arr) {
 }
 
 function changeStreetsNamesState(malus) {
-  map.removeLayer(tileLayer);
-  tileLayer = L.tileLayer(tilesStreetsNamed, {
-    maxZoom,
-    minZoom: dynamicMinZoom,
-  }).addTo(map);
-  updatePoints(malus)
+  labelLayerIds.forEach((id) =>
+    map.setLayoutProperty(id, "visibility", "visible")
+  );
+  updatePoints(malus);
 }
 
 function rotateMap(malus) {
   map.setBearing(0);
-  updatePoints(malus)
+  updatePoints(malus);
 }
 
 let linesMarker = null;
 let neighboursMarkers = [];
 
+// Crée un marqueur non interactif à partir d'un élément DOM.
+function makeMarker(lat, lon, el) {
+  el.style.pointerEvents = "none";
+  return new maplibregl.Marker({ element: el, anchor: "center" })
+    .setLngLat([lon, lat])
+    .addTo(map);
+}
+
 function changeNeighboursState(malus) {
-  if (neighboursMarkers.length) {
-    neighboursMarkers.forEach((m) => map.removeLayer(m));
-    neighboursMarkers = [];
-  }
+  neighboursMarkers.forEach((m) => m.remove());
+  neighboursMarkers = [];
 
   dailyNeighbours.forEach((n) => {
     if (!n.lines || !n.lines.length) return;
     if (n.lon == currentStation.lon && n.lat == currentStation.lat) return;
-    const html = document.createElement("div");
-    html.appendChild(badgesEl(n.lines));
+
+    const el = document.createElement("div");
+    el.style.display = "flex";
+    el.style.alignItems = "center";
+    el.style.whiteSpace = "nowrap";
+    el.appendChild(badgesEl(n.lines));
 
     const label = document.createElement("span");
     label.textContent = n.name;
     label.style.marginLeft = "4px";
     label.className = "station-label";
-    html.appendChild(label);
+    el.appendChild(label);
 
-    neighboursMarkers.push(
-      L.marker([n.lat, n.lon], {
-        icon: L.divIcon({ className: "", html: html.outerHTML, iconSize: null }),
-        interactive: false,
-      }).addTo(map)
-    );
+    neighboursMarkers.push(makeMarker(n.lat, n.lon, el));
   });
-  updatePoints(malus)
+
+  updatePoints(malus);
 }
 
 function changeLinesState(malus) {
   if (linesMarker) {
-    map.removeLayer(linesMarker);
+    linesMarker.remove();
     linesMarker = null;
   }
 
   if (!currentStation.lines || !currentStation.lines.length) return;
 
-  const html = document.createElement("div");
-  html.appendChild(badgesEl(currentStation.lines));
-
-  linesMarker = L.marker([currentStation.lat, currentStation.lon], {
-    icon: L.divIcon({ className: "", html: html.outerHTML, iconSize: null }),
-    interactive: false,
-  }).addTo(map);
+  const el = document.createElement("div");
+  el.appendChild(badgesEl(currentStation.lines));
+  linesMarker = makeMarker(currentStation.lat, currentStation.lon, el);
 
   updatePoints(malus);
 }
@@ -334,7 +344,7 @@ async function init() {
   maxRadius = daily.radiusMeters;
   maxGuesses = daily.maxGuesses;
 
-  initMap();
+  await initMap();
 
   const saved = loadProgress(dailyDate);
   if (saved) {
@@ -343,7 +353,6 @@ async function init() {
     if (saved.revealedName) {
       currentStation.name = saved.revealedName;
       // TODO : écran de fin
-      // document.getElementById("output").textContent = saved.revealedName;
     }
     points = saved.points;
     if (endGame) document.getElementById("guessForm").style.display = "none";

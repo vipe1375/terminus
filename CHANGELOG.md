@@ -4,9 +4,15 @@ Jeu du métro
 - écran de fin
 - tutoriel pour les nouveaux utilisateurs
 - reinitialisation de la station quotidienne sur la page admin
-- refonte de la page admin
-- passage sur MapLibre
-- points: retirer des points lors de mauvaises réponses, adapter à la fréquentation de la station
+- points: adapter à la fréquentation de la station
+
+## v0.0.8
+### Changements
+- passage sur MapLibre et OpenFreeMap
+- retrait des points lors d'une mauvaise tentative
+- suppression de la page `admin` devenue inutile
+- blocage de la révélation de la réponse par changement de date
+- sécurisation de la génération de station
 
 ## v0.0.7
 ### Nouveautés
