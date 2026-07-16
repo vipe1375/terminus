@@ -22,6 +22,9 @@ body {
     font-family: 'Le-Murmure', monospace;
     color: #003878
 }
+.pointsText {
+    padding-top: 20px;
+}
 .mapContainer {
     display: flex;
     justify-content: center;

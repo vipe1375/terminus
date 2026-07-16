@@ -16,6 +16,7 @@ const guesses = [];
 let map = null;
 let mapRotation = null;
 let endGame = false;
+let points = 500;
 
 const maxSuggestions = 5;
 
@@ -40,7 +41,7 @@ function saveProgress() {
   );
   localStorage.setItem(
     storeKey(dailyDate),
-    JSON.stringify({ guesses, endGame, revealedName: currentStation.name, usedOptions })
+    JSON.stringify({ guesses, endGame, revealedName: currentStation.name, usedOptions, points: points })
   );
 }
 
@@ -50,11 +51,6 @@ function loadProgress(date) {
   } catch {
     return null;
   }
-}
-
-async function loadConfig(date) {
-  const response = await fetch("/api/config");
-  config = await response.config
 }
 
 async function loadStationNames() {
@@ -74,14 +70,12 @@ function zoomForRadius(lat, radiusMeters, sizePx) {
 }
 
 function initMap() {
-  console.log("maxRadius utilisé:", maxRadius);
   const lat = currentStation.lat;
   const lon = currentStation.lon;
 
   mapRotation = Math.random() * 360;
 
   const sizePx = document.getElementById("map").clientWidth || 300;
-  console.log(sizePx)
   const zoom = Math.min(maxZoom, zoomForRadius(lat, maxRadius, sizePx));
 
   map = L.map("map", {
@@ -91,10 +85,6 @@ function initMap() {
     inertia: false,
     zoomSnap: 0.1,
   }).setView([lat, lon], zoom);
-
-  console.log("zoom calculé:", zoom, "minZoom appliqué:", Math.floor(zoom));
-  console.log("map.getMinZoom():", map.getMinZoom());
-  console.log("map.getZoom():", map.getZoom());
 
   dynamicMinZoom = Math.floor(zoom);
   tileLayer = L.tileLayer(tilesStreets, {
@@ -133,7 +123,6 @@ function initMap() {
   });
   
   map.setBearing(mapRotation);
-  console.log("zoom après setBearing:", map.getZoom());
 }
 
 async function guess() {
@@ -240,22 +229,24 @@ function autocomplete(inp, arr) {
   document.addEventListener("click", closeAllLists);
 }
 
-function changeStreetsNamesState() {
+function changeStreetsNamesState(malus) {
   map.removeLayer(tileLayer);
   tileLayer = L.tileLayer(tilesStreetsNamed, {
     maxZoom,
     minZoom: dynamicMinZoom,
   }).addTo(map);
+  updatePoints(malus)
 }
 
-function rotateMap() {
+function rotateMap(malus) {
   map.setBearing(0);
+  updatePoints(malus)
 }
 
 let linesMarker = null;
 let neighboursMarkers = [];
 
-function changeNeighboursState() {
+function changeNeighboursState(malus) {
   if (neighboursMarkers.length) {
     neighboursMarkers.forEach((m) => map.removeLayer(m));
     neighboursMarkers = [];
@@ -280,9 +271,10 @@ function changeNeighboursState() {
       }).addTo(map)
     );
   });
+  updatePoints(malus)
 }
 
-function changeLinesState() {
+function changeLinesState(malus) {
   if (linesMarker) {
     map.removeLayer(linesMarker);
     linesMarker = null;
@@ -297,6 +289,8 @@ function changeLinesState() {
     icon: L.divIcon({ className: "", html: html.outerHTML, iconSize: null }),
     interactive: false,
   }).addTo(map);
+
+  updatePoints(malus);
 }
 
 function badgeEl(line) {
@@ -316,12 +310,17 @@ function badgesEl(lines) {
   return wrap;
 }
 
-function useOnce(button, action) {
+function useOnce(button, action, malus) {
   button.addEventListener("click", () => {
-    action();
+    action(malus);
     button.disabled = true;
     saveProgress();
   });
+}
+
+function updatePoints(malus) {
+  points -= malus;
+  document.getElementById("pointsText").textContent = `Points : ${points}`;
 }
 
 /* INIT GLOBAL */
@@ -346,14 +345,16 @@ async function init() {
       // TODO : écran de fin
       // document.getElementById("output").textContent = saved.revealedName;
     }
+    points = saved.points;
     if (endGame) document.getElementById("guessForm").style.display = "none";
 
     (saved.usedOptions || []).forEach((id) => {
       const btn = document.getElementById(id);
       btn.disabled = true;
-      actionsByOptionId[id]();
+      actionsByOptionId[id](0);
     });
   }
+  updatePoints(0);
 
   autocomplete(document.getElementById("guess"), stationsNames);
 
@@ -364,10 +365,10 @@ async function init() {
 
   renderAttempts();
 
-  useOnce(document.getElementById("streetsNamesOption"), changeStreetsNamesState);
-  useOnce(document.getElementById("mapRotationOption"), rotateMap);
-  useOnce(document.getElementById("linesOption"), changeLinesState);
-  useOnce(document.getElementById("neighboursOption"), changeNeighboursState);
+  useOnce(document.getElementById("streetsNamesOption"), changeStreetsNamesState, 50);
+  useOnce(document.getElementById("mapRotationOption"), rotateMap, 50);
+  useOnce(document.getElementById("linesOption"), changeLinesState, 100);
+  useOnce(document.getElementById("neighboursOption"), changeNeighboursState, 100);
 }
 
 init();
