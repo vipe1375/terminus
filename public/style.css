@@ -14,16 +14,20 @@ body {
     font-family: 'General Sans';
     src: url('./fonts/GeneralSans-Variable.ttf') format('truetype');
 }
+h1 {
+    font-size: 34pt;
+    font-family: 'Le-Murmure', monospace;
+    color: #003878;
+    font-weight: bold;
+}
 .headerContainer {
     display: flex;
     justify-content: center;
     padding: 20px 0;
     font-size: 30pt;
     font-family: 'Le-Murmure', monospace;
-    color: #003878
-}
-.pointsText {
-    padding-top: 20px;
+    color: #003878;
+    font-weight: bold;
 }
 .mapContainer {
     display: flex;
@@ -60,6 +64,7 @@ body {
     background-color: #B8D9FF;
     color: #002147;
     border-radius: 8px;
+    padding: 5px 8px;
 }
 .option-btn:disabled {
     background-color: #ccc;
@@ -73,7 +78,7 @@ body {
     max-height: 30vh;
     overflow-y: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 6px;
     padding: 10px;
     background: white;
@@ -107,11 +112,13 @@ input[type="text"] {
     background-color: #f1f1f1;
     width: 100%;
 }
-button {
+#guessButton {
     background-color: #2E8FFF;
     color: #fff;
     font-family: inherit;
     border-radius: 8px;
+    white-space: nowrap;
+    padding: 10px 16px;
 }
 .autocomplete-items {
     position: absolute;
@@ -161,4 +168,20 @@ button {
 .station-label {
     font-family: 'General Sans', sans-serif;
     font-weight: 420;
+}
+#difficultyDot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+#gameInfo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: space-between;
+    padding-top: 20px;
 }

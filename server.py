@@ -18,14 +18,20 @@ from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(ROOT, "public")
-STATIONS_PATH = os.path.join(ROOT, "data", "stations_merged.json")
+STATIONS_PATH = os.path.join(ROOT, "data", "stations_ranked.json")
 
 PORT = int(os.environ.get("PORT", "8000"))
 
 # Reglages figes
 RADIUS_METERS = 500      # rayon de la zone autorisee (doit matcher game.js)
-MAX_GUESSES = 6          # nombre d'essais
 NEIGHBOUR_RADIUS = 1000  # rayon de recherche des stations voisines
+POINTS = {
+  "1": { "attempts": 10, "streets": 15, "lines": 25, "neighbours": 30 },
+  "2": { "attempts": 8,  "streets": 13, "lines": 22, "neighbours": 26 },
+  "3": { "attempts": 7,  "streets": 11, "lines": 18, "neighbours": 22 },
+  "4": { "attempts": 6,  "streets": 9,  "lines": 15, "neighbours": 18 },
+  "5": { "attempts": 5,  "streets": 7,  "lines": 12, "neighbours": 15 }
+}
 
 DAILY_SEED = os.environ.get("DAILY_SEED")
 EPOCH = date(2024, 1, 1)
@@ -62,13 +68,6 @@ def haversine(lat1, lon1, lat2, lon2):
     dlmb = math.radians(lon2 - lon1)
     a = math.sin(dphi / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dlmb / 2) ** 2
     return 2 * r * math.asin(math.sqrt(a))
-
-
-def parse_date(value):
-    try:
-        return datetime.strptime(value, "%Y-%m-%d").date()
-    except (TypeError, ValueError):
-        return date.today()
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -132,14 +131,14 @@ class Handler(BaseHTTPRequestHandler):
         self._send_json({
             "date": day.isoformat(),
             "lat": target["lat"], "lon": target["lon"], "lines": target["lines"],
+            "difficulty": target["difficulty"],
             "neighbours": neighbours,
             "radiusMeters": RADIUS_METERS,
-            "maxGuesses": MAX_GUESSES,
+            "points": POINTS[str(target["difficulty"])]
         })
 
     def _guess(self, body):
         day = date.today()  # au lieu de parse_date(body.get("date"))
-        attempt = int(body.get("attempt") or 0)
         guess = NORM_INDEX.get(normalize(body.get("name", "")))
         if not guess:
             return self._send_json({"error": "unknown_station"}, 400)
@@ -148,7 +147,7 @@ class Handler(BaseHTTPRequestHandler):
         correct = normalize(guess["name"]) == normalize(target["name"])
 
         res = {"correct": correct}
-        if correct or attempt + 1 >= MAX_GUESSES:
+        if correct:
             res["name"] = target["name"]
         self._send_json(res)
 

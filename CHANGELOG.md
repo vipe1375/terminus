@@ -3,8 +3,16 @@ Jeu du métro
 ## À venir
 - écran de fin
 - tutoriel pour les nouveaux utilisateurs
-- reinitialisation de la station quotidienne sur la page admin
-- points: adapter à la fréquentation de la station
+
+## v0.0.9
+### Nouveautés
+- indice sur la fréquentation de la station via la difficulté
+- calibration des points sur la difficulté & suppression du nombre maximal d'essais
+### Changements
+- taille des boutons
+- poids de police du titre
+- suppression de la rotation de la carte
+- inversion de l'ordre dans la liste des essais : la dernière tentative s'affichera en haut
 
 ## v0.0.8
 ### Changements

@@ -10,32 +10,45 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="headerContainer">
+        <!--<div class="headerContainer">
             Untitled Metro Game
-        </div>
+        </div>-->
+        <h1>Untitled Metro Game</h1>
 
         <div id="options" class="optionsContainer">
-            <label class="option">
+            <!--<label class="option">
                 <button id="mapRotationOption" class="option-btn">Orienter la carte au nord</button> <span style="color: red;">-50</span>
-            </label>
+            </label>-->
         
             <label class="option">
-                <button id="streetsNamesOption" class="option-btn">Afficher les noms des rues</button><span style="color: red;">-50</span>
+                <button id="streetsNamesOption" class="option-btn">Afficher les noms des rues</button><span id="streetsPoints" style="color: red;">-50</span>
             </label>          
             <label class="option">
-                <button id="linesOption" class="option-btn">Afficher les lignes</button> <span style="color: red;">-100</span>
+                <button id="linesOption" class="option-btn">Afficher les lignes</button> <span id="linesPoints" style="color: red;">-100</span>
             </label>
             <label class="option">
-                <button id="neighboursOption" class="option-btn">Afficher les stations voisines</button> <span style="color: red;">-100</span>
+                <button id="neighboursOption" class="option-btn">Afficher les stations voisines</button> <span id="neighboursPoints" style="color: red;">-100</span>
             </label>
         </div>
 
-        <div id="pointsText" class="pointsText"></div>
-
+        <div id="gameInfo">
+            <div id="pointsText" class="pointsText"></div>
+    
+            <div class="difficultyText">
+                <span id="difficultyDot"></span>
+                <span id="difficultyText"></span>
+            </div>
+        </div>
+        
         <div class="mapContainer">
             <div class="mapCircle">
                 <div id="map"></div>
             </div>
+        </div>
+
+        <div class="difficultyText">
+            <span id="difficultyDot"></span>
+            <span id="difficultyText"></span>
         </div>
 
         <form id="guessForm" autocomplete="off">
@@ -45,7 +58,7 @@
                     type="text"
                     placeholder="Entrez une station"
                 />
-                <button type="submit">OK</button>
+                <button id="guessButton" type="submit">OK</button>
             </div>
         </form>
 

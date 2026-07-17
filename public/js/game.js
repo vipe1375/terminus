@@ -1,8 +1,7 @@
 const maxZoom = 19;
 let dynamicMinZoom = null;
 let maxRadius = 500;
-let maxGuesses = 6;
-
+let costs = null;
 // Style vectoriel libre (OpenFreeMap). Les libellés sont masqués au départ
 // et réaffichés via l'option "noms des rues".
 const mapStyle = "https://tiles.openfreemap.org/styles/positron";
@@ -12,10 +11,11 @@ let currentStation = null; // { lat, lon, lines, name } — name reste null tant
 let dailyDate = null;
 let dailyNeighbours = [];
 let stationsNames = null;
+let difficulty = null;
 const guesses = [];
 let map = null;
 let endGame = false;
-let points = 500;
+let points = 100;
 
 const maxSuggestions = 5;
 
@@ -25,13 +25,13 @@ const optionIds = [
   "streetsNamesOption",
   "linesOption",
   "neighboursOption",
-  "mapRotationOption",
+  // "mapRotationOption",
 ];
 const actionsByOptionId = {
   streetsNamesOption: changeStreetsNamesState,
   linesOption: changeLinesState,
   neighboursOption: changeNeighboursState,
-  mapRotationOption: rotateMap,
+  // mapRotationOption: rotateMap,
 };
 
 function saveProgress() {
@@ -96,7 +96,7 @@ function initMap() {
     zoom,
     minZoom: dynamicMinZoom,
     maxZoom,
-    bearing: Math.random() * 360,
+    // bearing: Math.random() * 360,
     attributionControl: false,
   });
 
@@ -147,7 +147,7 @@ async function guess() {
   const res = await fetch("/api/guess", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ date: dailyDate, name: value, attempt: guesses.length }),
+    body: JSON.stringify({ date: dailyDate, name: value }),
   }).then((r) => r.json());
 
   if (res.error) return; // station inconnue : on ignore simplement
@@ -159,10 +159,10 @@ async function guess() {
   }
 
   if (!res.correct) {
-    updatePoints(10)
+    updatePoints(costs.attempts)
   }
 
-  if (res.correct || guesses.length == maxGuesses) {
+  if (res.correct) {
     endGame = true;
     document.getElementById("guessForm").style.display = "none";
   }
@@ -246,10 +246,10 @@ function changeStreetsNamesState(malus) {
   updatePoints(malus);
 }
 
-function rotateMap(malus) {
-  map.setBearing(0);
-  updatePoints(malus);
-}
+// function rotateMap(malus) {
+//   map.setBearing(0);
+//   updatePoints(malus);
+// }
 
 let linesMarker = null;
 let neighboursMarkers = [];
@@ -330,7 +330,25 @@ function useOnce(button, action, malus) {
 
 function updatePoints(malus) {
   points -= malus;
-  document.getElementById("pointsText").textContent = `Points : ${points}`;
+  if (points < 0) points = 0;
+    document.getElementById("pointsText").textContent = `Points : ${points}`;
+    if (points === 0) {
+      endGame = true;
+      document.getElementById("guessForm").style.display = "none";
+    }
+}
+
+function setDifficultyText() {
+  const levels = {
+    1: ["Très facile", "#2E8FFF"],   // bleu
+    2: ["Facile", "#3BB143"],        // vert
+    3: ["Moyen", "#F5C518"],         // jaune
+    4: ["Difficile", "#FF8C00"],     // orange
+    5: ["Très difficile", "#E03131"] // rouge
+  };
+  const [text, color] = levels[difficulty];
+  document.getElementById("difficultyText").textContent = text;
+  document.getElementById("difficultyDot").style.background = color;
 }
 
 /* INIT GLOBAL */
@@ -342,7 +360,8 @@ async function init() {
   dailyNeighbours = daily.neighbours || [];
   currentStation = { lat: daily.lat, lon: daily.lon, lines: daily.lines, name: null };
   maxRadius = daily.radiusMeters;
-  maxGuesses = daily.maxGuesses;
+  difficulty = daily.difficulty;
+  costs = daily.points;
 
   await initMap();
 
@@ -364,6 +383,7 @@ async function init() {
     });
   }
   updatePoints(0);
+  setDifficultyText();
 
   autocomplete(document.getElementById("guess"), stationsNames);
 
@@ -374,10 +394,15 @@ async function init() {
 
   renderAttempts();
 
-  useOnce(document.getElementById("streetsNamesOption"), changeStreetsNamesState, 50);
-  useOnce(document.getElementById("mapRotationOption"), rotateMap, 50);
-  useOnce(document.getElementById("linesOption"), changeLinesState, 100);
-  useOnce(document.getElementById("neighboursOption"), changeNeighboursState, 100);
+  useOnce(document.getElementById("streetsNamesOption"), changeStreetsNamesState, costs.streets);
+  // useOnce(document.getElementById("mapRotationOption"), rotateMap, 50);
+  useOnce(document.getElementById("linesOption"), changeLinesState, costs.lines);
+  useOnce(document.getElementById("neighboursOption"), changeNeighboursState, costs.neighbours);
+
+  document.getElementById("streetsPoints").textContent = `-${costs.streets}`;
+  document.getElementById("linesPoints").textContent = `-${costs.lines}`;
+  document.getElementById("neighboursPoints").textContent = `-${costs.neighbours}`;
+  document.getElementById("guessButton").textContent = `OK (-${costs.attempts})`;
 }
 
 init();
