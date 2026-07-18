@@ -12,7 +12,7 @@ import math
 import os
 import random
 import unicodedata
-from datetime import date, datetime
+from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
@@ -71,7 +71,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
 
 class Handler(BaseHTTPRequestHandler):
-    def log_message(self, fmt, *args):
+    def log_message(self, format, *args):
         pass
 
     def _send_json(self, obj, status=200):

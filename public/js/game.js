@@ -351,6 +351,20 @@ function setDifficultyText() {
   document.getElementById("difficultyDot").style.background = color;
 }
 
+function initTutorial() {
+  const overlay = document.getElementById("tutorialOverlay");
+  if (localStorage.getItem("tutorialSeen")) {
+    overlay.style.display = "none";
+    return;
+  }
+  document.getElementById("tutorialClose").addEventListener("click", () => {
+    overlay.style.display = "none";
+    if (document.getElementById("doNotShowAgainCheckbox").checked) {
+      localStorage.setItem("tutorialSeen", "1");
+    }
+  });
+}
+
 /* INIT GLOBAL */
 async function init() {
   await loadStationNames();
@@ -364,6 +378,7 @@ async function init() {
   costs = daily.points;
 
   await initMap();
+  
 
   const saved = loadProgress(dailyDate);
   if (saved) {
@@ -391,6 +406,8 @@ async function init() {
     e.preventDefault();
     guess();
   });
+
+  initTutorial();
 
   renderAttempts();
 
