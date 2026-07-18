@@ -4,6 +4,10 @@ Jeu du métro
 - écran de fin
 - tutoriel pour les nouveaux utilisateurs
 
+## v0.0.10
+### Nouveautés
+- écran Tutoriel à la première visite du site
+
 ## v0.0.9
 ### Nouveautés
 - indice sur la fréquentation de la station via la difficulté
