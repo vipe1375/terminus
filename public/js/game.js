@@ -16,6 +16,7 @@ const guesses = [];
 let map = null;
 let endGame = false;
 let points = 100;
+let answer = null;
 
 const maxSuggestions = 5;
 
@@ -158,15 +159,12 @@ async function guess() {
     currentStation.name = res.name;
   }
 
-  if (!res.correct) {
-    updatePoints(costs.attempts)
-  }
-
   if (res.correct) {
     endGame = true;
     document.getElementById("guessForm").style.display = "none";
   }
 
+  updatePoints(costs.attempts);
   renderAttempts();
   saveProgress();
 }
@@ -191,7 +189,6 @@ function renderAttempts() {
   });
 }
 
-/* AUTOCOMPLETE (inchangé) */
 function autocomplete(inp, arr) {
   let currentFocus;
 
@@ -254,7 +251,6 @@ function changeStreetsNamesState(malus) {
 let linesMarker = null;
 let neighboursMarkers = [];
 
-// Crée un marqueur non interactif à partir d'un élément DOM.
 function makeMarker(lat, lon, el) {
   el.style.pointerEvents = "none";
   return new maplibregl.Marker({ element: el, anchor: "center" })
@@ -335,6 +331,7 @@ function updatePoints(malus) {
     if (points === 0) {
       endGame = true;
       document.getElementById("guessForm").style.display = "none";
+      showEndScreen();
     }
 }
 
@@ -365,7 +362,30 @@ function initTutorial() {
   });
 }
 
-/* INIT GLOBAL */
+function showEndScreen() {
+  let text = null;
+  let pointsText = null;
+  if (endGame == false) return;
+  if (currentStation.name) {
+    text = `Bravo ! Vous avez trouvé la station <strong>${currentStation.name}</strong> !`;
+    pointsText = `Points : <strong>${points}</strong>`;
+  } else {
+    text = `Dommage ! La station était <strong>${currentStation.name}</strong>.`;
+    pointsText = `Essais : <strong>${attempts.length}</strong>`;
+  }
+  
+  document.getElementById("endText").innerHTML = text;
+  document.getElementById("endPoints").innerHTML = pointsText;
+
+  const overlay = document.getElementById("endOverlay");
+  overlay.style.display = "flex";
+  document.getElementById("options").style.display = "none";
+
+  document.getElementById("closeEndDisplay").addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+}
+
 async function init() {
   await loadStationNames();
 
@@ -378,7 +398,8 @@ async function init() {
   costs = daily.points;
 
   await initMap();
-  
+
+  document.getElementById("endOverlay").style.display = "none";
 
   const saved = loadProgress(dailyDate);
   if (saved) {

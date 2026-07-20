@@ -1,8 +1,17 @@
 Jeu du métro
 
 ## À venir
-- écran de fin
-- tutoriel pour les nouveaux utilisateurs
+- archives
+- informations station sur l'écran de fin
+
+## v0.0.11
+### Nouveautés
+- écran de fin 
+- page tutoriel accessible depuis la page principal
+- ajout du README
+### Changements
+- séparation du code pour une meilleure maintenabilité
+- points décomptés uniquement après une mauvaise réponse (la bonne réponse ne retire pas de points)
 
 ## v0.0.10
 ### Nouveautés
