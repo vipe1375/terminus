@@ -43,13 +43,11 @@ function autocomplete(inp, arr) {
       if (arr[i].substr(0, val.length).toLowerCase() === val.toLowerCase()) {
         nSuggestions += 1;
         b = document.createElement("div");
-        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-        b.innerHTML += arr[i].substr(val.length);
-        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>" + arr[i].substr(val.length);
+        b.dataset.value = arr[i];   // stockage sûr, pas d'échappement HTML
 
         b.addEventListener("click", function () {
-          inp.value = this.getElementsByTagName("input")[0].value;
-          closeAllLists();
+          inp.value = this.dataset.value;          closeAllLists();
         });
 
         a.appendChild(b);

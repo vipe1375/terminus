@@ -7,12 +7,26 @@ const levels = {
   5: ["Très difficile", "#E03131"],
 };
 
+const stateColors = {
+  new: "transparent",   // pas commencée
+  playing: "#FFF4CC",   // en cours (jaune pâle)
+  done: "#D4F7D4",      // terminée (vert pâle)
+};
+
+function gameState(date) {
+  const saved = JSON.parse(localStorage.getItem(`metro-du-jour:${date}`) || "null");
+  if (!saved) return "new";
+  return saved.endGame ? "done" : "playing";
+}
+
 async function loadArchive() {
   const days = await fetch("/api/archive").then((r) => r.json());
   const container = document.getElementById("archiveList");
 
   days.forEach((d) => {
-    const [text, color] = levels[d.difficulty];
+    const [text, iconColor] = levels[d.difficulty];
+
+    const state = gameState(d.date);
 
     const row = document.createElement("a");
     row.href = `/?date=${d.date}`;
@@ -22,12 +36,14 @@ async function loadArchive() {
     row.style.padding = "8px";
     row.style.textDecoration = "none";
     row.style.color = "inherit";
+    row.style.background = stateColors[state];
+    row.style.borderRadius = "6px";
 
     const dot = document.createElement("span");
     dot.style.width = "12px";
     dot.style.height = "12px";
     dot.style.borderRadius = "50%";
-    dot.style.background = color;
+    dot.style.background = iconColor;
 
     const label = document.createElement("span");
     const nice = new Date(d.date).toLocaleDateString("fr-FR");

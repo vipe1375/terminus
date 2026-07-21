@@ -31,14 +31,15 @@ async function guess() {
     currentStation.name = res.name;
   }
 
-  console.log(res.correct)
-
   if (res.correct) {
     endGame = true;
     document.getElementById("guessForm").style.display = "none";
+    showEndScreen();
   }
 
-  updatePoints(costs.attempts);
+  if (!res.correct) {
+    updatePoints(costs.attempts);
+  }
   renderAttempts();
   saveProgress();
 }
