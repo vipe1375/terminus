@@ -111,7 +111,7 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/":
             return self._send_file("index.html")
         if path == "/api/daily":
-            return self._daily(date.today())
+            return self._daily()
         if path == "/api/stations":
             return self._send_json([s["name"] for s in STATIONS])
         return self._send_file(path.lstrip("/"))
@@ -121,7 +121,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._guess(self._read_json_body())
         return self._send_json({"error": "not found"}, 404)
 
-    def _daily(self, day):
+    def _daily(self):
+        day = date.today()
         target = target_for(day)
         neighbours = [
             {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"], "name": s["name"]}

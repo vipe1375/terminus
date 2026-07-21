@@ -3,6 +3,9 @@ Jeu du métro
 ## À venir
 - archives
 - informations station sur l'écran de fin
+- boussole pour réorienter la carte au nord
+- streak
+- amélioration des suggestions de station
 
 ## v0.0.11
 ### Nouveautés
