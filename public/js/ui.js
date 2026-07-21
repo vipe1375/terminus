@@ -104,16 +104,26 @@ function initTutorial() {
   });
 }
 
+function renderLineBadges(lines) {
+  return (lines || [])
+    .map((l) => `<span style="
+      display:inline-flex; align-items:center; justify-content:center;
+      width:22px; height:22px; margin:0 2px; border-radius:50%;
+      background:${l.color}; color:${l.text};
+      font-weight:bold; font-size:13px;">${l.short}</span>`)
+    .join("");
+}
+
 function showEndScreen() {
   let text = null;
   let pointsText = null;
   if (endGame == false) return;
   if (currentStation.name) {
-    text = `Bravo ! Vous avez trouvé la station <strong>${currentStation.name}</strong> !`;
+    text = `Bravo ! Vous avez trouvé la station <strong>${currentStation.name}</strong> ! ${renderLineBadges(currentStation.lines)}`;
     pointsText = `Points : <strong>${points}</strong>`;
   } else {
-    text = `Dommage ! La station était <strong>${currentStation.name}</strong>.`;
-    pointsText = `Essais : <strong>${attempts.length}</strong>`;
+    text = `Dommage ! La station était <strong>${currentStation.name}</strong> ! ${renderLineBadges(currentStation.lines)}`;
+    pointsText = `Essais : <strong>${guesses.length}</strong>`;
   }
   
   document.getElementById("endText").innerHTML = text;
