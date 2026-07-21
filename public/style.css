@@ -211,3 +211,12 @@ input[type="text"] {
     justify-content: space-between;
     padding-top: 20px;
 }
+
+.pageContent {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
