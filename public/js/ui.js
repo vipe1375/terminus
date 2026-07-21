@@ -69,12 +69,12 @@ function autocomplete(inp, arr) {
 function updatePoints(malus) {
   points -= malus;
   if (points < 0) points = 0;
-  document.getElementById("pointsText").textContent = `Points : ${points}`;
-  if (points === 0) {
-    endGame = true;
-    document.getElementById("guessForm").style.display = "none";
-    showEndScreen();
-  }
+    document.getElementById("pointsText").textContent = `Points : ${points}`;
+    if (points === 0) {
+      endGame = true;
+      document.getElementById("guessForm").style.display = "none";
+      showEndScreen();
+    }
 }
 
 function setDifficultyText() {
@@ -118,11 +118,12 @@ function showEndScreen() {
   let text = null;
   let pointsText = null;
   if (endGame == false) return;
-  if (currentStation.name) {
+  if (points!=0) {
     text = `Bravo ! Vous avez trouvé la station <strong>${currentStation.name}</strong> ! ${renderLineBadges(currentStation.lines)}`;
     pointsText = `Points : <strong>${points}</strong>`;
   } else {
     text = `Dommage ! La station était <strong>${currentStation.name}</strong> ! ${renderLineBadges(currentStation.lines)}`;
+
     pointsText = `Essais : <strong>${guesses.length}</strong>`;
   }
   
