@@ -2,8 +2,9 @@
 """Serveur du jeu du metro.
 
 Choisit une station par jour (meme station pour tout le monde) et ne revele
-jamais son nom au client avant que la partie soit terminee (trouvee ou essais
-epuises). Bibliotheque standard uniquement.
+jamais son nom au client avant que la partie soit terminee. Les jours passes
+sont rejouables via un parametre date ; les jours futurs sont toujours refuses.
+Bibliotheque standard uniquement.
 
 Lancer : python3 server.py   (http://localhost:8000)
 """
@@ -12,9 +13,9 @@ import math
 import os
 import random
 import unicodedata
-from datetime import date
+from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(ROOT, "public")
@@ -25,6 +26,7 @@ PORT = int(os.environ.get("PORT", "8000"))
 # Reglages figes
 RADIUS_METERS = 500      # rayon de la zone autorisee (doit matcher game.js)
 NEIGHBOUR_RADIUS = 1000  # rayon de recherche des stations voisines
+LAUNCH_DATE = date(2026, 7, 13) 
 POINTS = {
   "1": { "attempts": 10, "streets": 15, "lines": 25, "neighbours": 30 },
   "2": { "attempts": 8,  "streets": 13, "lines": 22, "neighbours": 26 },
@@ -59,6 +61,15 @@ NORM_INDEX = {normalize(s["name"]): s for s in STATIONS}
 def target_for(day):
     idx = (day - EPOCH).days % len(STATIONS)
     return STATIONS[_DAILY_ORDER[idx]]
+
+
+# Parse une date client et la borne : jamais dans le futur.
+def safe_day(value):
+    try:
+        day = datetime.strptime(value, "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return date.today()
+    return min(day, date.today())
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -106,12 +117,16 @@ class Handler(BaseHTTPRequestHandler):
             return {}
 
     def do_GET(self):
-        path = urlparse(self.path).path
+        parsed = urlparse(self.path)
+        path = parsed.path
 
         if path == "/":
             return self._send_file("index.html")
         if path == "/api/daily":
-            return self._daily()
+            qs = parse_qs(parsed.query)
+            return self._daily(safe_day(qs.get("date", [None])[0]))
+        if path == "/api/archive":
+            return self._archive()
         if path == "/api/stations":
             return self._send_json([s["name"] for s in STATIONS])
         return self._send_file(path.lstrip("/"))
@@ -121,8 +136,7 @@ class Handler(BaseHTTPRequestHandler):
             return self._guess(self._read_json_body())
         return self._send_json({"error": "not found"}, 404)
 
-    def _daily(self):
-        day = date.today()
+    def _daily(self, day):
         target = target_for(day)
         neighbours = [
             {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"], "name": s["name"]}
@@ -138,8 +152,19 @@ class Handler(BaseHTTPRequestHandler):
             "points": POINTS[str(target["difficulty"])]
         })
 
+    def _archive(self):
+        today = date.today()
+        days = []
+        d = LAUNCH_DATE
+        while d < today:  # exclut aujourd'hui (jour courant, non spoile)
+            target = target_for(d)
+            days.append({"date": d.isoformat(), "difficulty": target["difficulty"]})
+            d += timedelta(days=1)
+        days.reverse()  # plus recents en premier
+        self._send_json(days)
+
     def _guess(self, body):
-        day = date.today()  # au lieu de parse_date(body.get("date"))
+        day = safe_day(body.get("date"))  # passe accepte, futur borne a aujourd'hui
         guess = NORM_INDEX.get(normalize(body.get("name", "")))
         if not guess:
             return self._send_json({"error": "unknown_station"}, 400)
@@ -148,7 +173,7 @@ class Handler(BaseHTTPRequestHandler):
         correct = normalize(guess["name"]) == normalize(target["name"])
 
         res = {"correct": correct}
-        if correct:
+        if correct or body.get("points") <= 0:
             res["name"] = target["name"]
         self._send_json(res)
 

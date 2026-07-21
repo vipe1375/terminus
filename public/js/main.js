@@ -20,7 +20,7 @@ async function guess() {
   const res = await fetch("/api/guess", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ date: dailyDate, name: value }),
+    body: JSON.stringify({ date: dailyDate, name: value, points: points-costs.attempts }),
   }).then((r) => r.json());
 
   if (res.error) return; // station inconnue : on ignore simplement
@@ -31,14 +31,14 @@ async function guess() {
     currentStation.name = res.name;
   }
 
+  console.log(res.correct)
+
   if (res.correct) {
     endGame = true;
     document.getElementById("guessForm").style.display = "none";
-    showEndScreen();
   }
-  else {
-    updatePoints(costs.attempts);
-  }
+
+  updatePoints(costs.attempts);
   renderAttempts();
   saveProgress();
 }

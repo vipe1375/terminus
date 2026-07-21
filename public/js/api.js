@@ -5,6 +5,8 @@ async function loadStationNames() {
 }
 
 async function loadDaily() {
-  const response = await fetch("/api/daily");
+  const date = new URLSearchParams(location.search).get("date");
+  const url = date ? `/api/daily?date=${date}` : "/api/daily";
+  const response = await fetch(url);
   return response.json();
 }
