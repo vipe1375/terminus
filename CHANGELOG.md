@@ -1,37 +1,40 @@
-Jeu du métro
+# Changelog
 
-## À venir
-- archives
-- informations station sur l'écran de fin
-- boussole pour réorienter la carte au nord
-- streak
-- amélioration des suggestions de station
+## v0.0.12
+### Ajouté
+- `TODO.md`
+- bouton Boussole pour réorienter la carte au nord
+### Modifié
+- couleurs des parties selon l'état d'avancement dans la liste des archives
+### Corrigé
+- autocomplétion des stations avec une apostrophe
+- écran de fin
 
 ## v0.0.11
-### Nouveautés
+### Ajouté
 - écran de fin 
 - page tutoriel accessible depuis la page principal
 - ajout du README
-### Changements
+### Modifié
 - séparation du code pour une meilleure maintenabilité
 - points décomptés uniquement après une mauvaise réponse (la bonne réponse ne retire pas de points)
 
 ## v0.0.10
-### Nouveautés
+### Ajouté
 - écran Tutoriel à la première visite du site
 
 ## v0.0.9
-### Nouveautés
+### Ajouté
 - indice sur la fréquentation de la station via la difficulté
 - calibration des points sur la difficulté & suppression du nombre maximal d'essais
-### Changements
+### Modifié
 - taille des boutons
 - poids de police du titre
 - suppression de la rotation de la carte
 - inversion de l'ordre dans la liste des essais : la dernière tentative s'affichera en haut
 
 ## v0.0.8
-### Changements
+### Modifié
 - passage sur MapLibre et OpenFreeMap
 - retrait des points lors d'une mauvaise tentative
 - suppression de la page `admin` devenue inutile
@@ -39,49 +42,49 @@ Jeu du métro
 - sécurisation de la génération de station
 
 ## v0.0.7
-### Nouveautés
+### Ajouté
 - page "Mentions légales"
 - système de points
 
 ## v0.0.6
-### Changements
+### Modifié
 - polices et couleurs de l'interface
 - maximum de suggestions affichées
 
 ## v0.0.5
-### Nouveautés
+### Ajouté
 - nom des stations voisines
-### Changements
+### Modifié
 - préférences utilisateur supprimées au profit d'un système d'indices
 - fix d'un bug dans le déplacement de la carte
 - fix de la distance d'affichage des stations voisines
 - police du titre du jeu
 
 ## v0.0.4
-### Nouveautés
+### Ajouté
 - station quotidienne & sauvegarde de la progression
 - page admin : contrôle des paramètres du jeu
 - sauvegarde des préférences utilisateur
-### Changements
+### Modifié
 - architecture globale
 
 ## v0.0.3
-### Nouveautés
+### Ajouté
 - Affichage des lignes passant par la station
 - Affichage des stations voisines
 - Fins du jeu
-### Changements
+### Modifié
 - Options d'affichage des lignes et stations
 - UI globale
 
 ## v0.0.2
-### Nouveautés
+### Ajouté
 - Menu `Options` : orientation de la carte, affichage du nom des rues
 - Liste des tentatives
-### Changements
+### Modifié
 - UI globale
 - Bugs
 
 ## v0.0.1
-### Nouveautés
+### Ajouté
 - Initial release

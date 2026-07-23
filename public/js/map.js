@@ -54,6 +54,10 @@ function initMap() {
     }
   });
 
+  document.getElementById("mapCornerBtn").addEventListener("click", function () {
+    map.rotateTo(0);
+  })
+
   return new Promise((resolve) => {
     map.on("load", () => {
       labelLayerIds = map
