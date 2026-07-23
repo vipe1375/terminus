@@ -1,8 +1,9 @@
 # Changelog
 
-## À venir
+## v0.0.12
 ### Ajouté
 - `TODO.md`
+- bouton Boussole pour réorienter la carte au nord
 ### Modifié
 - couleurs des parties selon l'état d'avancement dans la liste des archives
 ### Corrigé
