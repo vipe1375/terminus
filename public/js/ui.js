@@ -136,3 +136,11 @@ function showEndScreen() {
     overlay.style.display = "none";
   });
 }
+
+function updateStreak() {
+  if (streak != 0 && streak != null) {
+    streakText = document.getElementById("streakText")
+    streakText.textContent = `${streak}🔥`;
+    streakText.style.fontWeight = 600;
+  }
+}

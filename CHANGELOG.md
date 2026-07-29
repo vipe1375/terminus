@@ -1,5 +1,10 @@
 # Changelog
 
+## À venir
+- série en cours (streak)
+- titre qui ramène à l'accueil sur toutes les pages 
+- bug de la date dans les archives
+
 ## v0.0.12
 ### Ajouté
 - `TODO.md`

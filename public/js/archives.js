@@ -46,7 +46,8 @@ async function loadArchive() {
     dot.style.background = iconColor;
 
     const label = document.createElement("span");
-    const nice = new Date(d.date).toLocaleDateString("fr-FR");
+    const [y, m, day] = d.date.split("-");
+    const nice = `${day}/${m}/${y}`;
     label.textContent = `${nice} — ${text}`;
 
     row.appendChild(dot);
