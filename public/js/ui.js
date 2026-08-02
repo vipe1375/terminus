@@ -19,6 +19,11 @@ function renderAttempts() {
   });
 }
 
+function strNoAccent(a) { return ('' + a).normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+
+function normalizeText(text) {
+  return strNoAccent(text.toLowerCase());
+}
 function autocomplete(inp, arr) {
   let currentFocus;
 
@@ -40,10 +45,12 @@ function autocomplete(inp, arr) {
     let nSuggestions = 0;
 
     for (i = 0; i < arr.length && nSuggestions < maxSuggestions; i++) {
-      if (arr[i].substr(0, val.length).toLowerCase() === val.toLowerCase()) {
+      let ind = normalizeText(arr[i]).indexOf(normalizeText(val));
+      if (ind != -1) {
         nSuggestions += 1;
         b = document.createElement("div");
-        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>" + arr[i].substr(val.length);
+        b.innerHTML = arr[i].slice(0, ind) + "<strong>" + arr[i].slice(ind, ind+val.length) + "</strong>" + arr[i].slice(ind+val.length);
+        // b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>" + arr[i].substr(val.length);
         b.dataset.value = arr[i];   // stockage sûr, pas d'échappement HTML
 
         b.addEventListener("click", function () {
@@ -54,6 +61,31 @@ function autocomplete(inp, arr) {
       }
     }
   });
+
+  inp.addEventListener("keydown", function (e) {
+    const items = this.parentNode.querySelectorAll(".autocomplete-items div");
+    if (!items.length) return;
+  
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      currentFocus++;
+      setActive(items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      currentFocus--;
+      setActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1) items[currentFocus].click();
+    }
+  });
+  
+  function setActive(items) {
+    items.forEach((el) => el.classList.remove("autocomplete-active"));
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("autocomplete-active");
+  }
 
   function closeAllLists() {
     document

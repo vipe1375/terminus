@@ -151,7 +151,7 @@ h1 a {
 .archivesContainer {
     margin-top: 20px;
     width: 220px;
-    max-height: 30vh;
+    max-height: 50vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@ input[type="text"] {
     background-color: #e9e9e9;
 }
 .autocomplete-active {
-    background-color: #2E8FFF !important;
+    background-color: rgba(106, 188, 238, 1) !important;
     color: #ffffff;
 }
 #map {
@@ -254,10 +254,14 @@ input[type="text"] {
     vertical-align: middle;
 }
 #gameInfo {
-    width: 200px;
+    width: 250px;
     display: flex;
     align-items: center;
     gap: 6px;
     justify-content: space-between;
     padding-top: 20px;
+    font-weight: 500;
+}
+#streakText:empty {
+    display: none;
 }
