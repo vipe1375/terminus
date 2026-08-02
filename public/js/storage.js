@@ -7,6 +7,15 @@ function saveProgress() {
     storeKey(dailyDate),
     JSON.stringify({ guesses, endGame, revealedName: currentStation.name, usedOptions, points: points })
   );
+  localStorage.setItem("streak", streak);
+}
+
+function loadStreak() {
+  try {
+    return JSON.parse(localStorage.getItem("streak"));
+  } catch {
+    return null;
+  }
 }
 
 function loadProgress(date) {

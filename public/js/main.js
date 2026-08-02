@@ -33,6 +33,8 @@ async function guess() {
 
   if (res.correct) {
     endGame = true;
+    streak += 1;
+    updateStreak();
     document.getElementById("guessForm").style.display = "none";
     showEndScreen();
   }
@@ -67,6 +69,8 @@ async function main() {
 
   await loadStationNames();
 
+  streak = loadStreak();
+
   await initMap();
   
   const saved = loadProgress(dailyDate);
@@ -87,9 +91,9 @@ async function main() {
       actionsByOptionId[id](0);
     });
   }
-  
-  
 
+  updateStreak();
+  
   autocomplete(document.getElementById("guess"), stationsNames);
 
   document.getElementById("guessForm").addEventListener("submit", function (e) {

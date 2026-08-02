@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Serveur du jeu du metro.
 
 Choisit une station par jour (meme station pour tout le monde) et ne revele
@@ -15,7 +14,7 @@ import random
 import unicodedata
 from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs, urlparse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(ROOT, "public")
@@ -24,8 +23,6 @@ STATIONS_PATH = os.path.join(ROOT, "data", "stations_ranked.json")
 PORT = int(os.environ.get("PORT", "8000"))
 
 # Reglages figes
-RADIUS_METERS = 500      # rayon de la zone autorisee (doit matcher game.js)
-NEIGHBOUR_RADIUS = 1000  # rayon de recherche des stations voisines
 LAUNCH_DATE = date(2026, 7, 13) 
 POINTS = {
   "1": { "attempts": 10, "streets": 15, "lines": 25, "neighbours": 30 },
@@ -138,17 +135,19 @@ class Handler(BaseHTTPRequestHandler):
 
     def _daily(self, day):
         target = target_for(day)
+        maxRadius = target["difficulty"]*150 + 500
+        neighbourRadius = 2 * maxRadius
         neighbours = [
             {"lat": s["lat"], "lon": s["lon"], "lines": s["lines"], "name": s["name"]}
             for s in STATIONS
-            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= NEIGHBOUR_RADIUS
+            if haversine(target["lat"], target["lon"], s["lat"], s["lon"]) <= neighbourRadius
         ]
         self._send_json({
             "date": day.isoformat(),
             "lat": target["lat"], "lon": target["lon"], "lines": target["lines"],
             "difficulty": target["difficulty"],
             "neighbours": neighbours,
-            "radiusMeters": RADIUS_METERS,
+            "radiusMeters": maxRadius,
             "points": POINTS[str(target["difficulty"])]
         })
 

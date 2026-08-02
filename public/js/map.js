@@ -24,7 +24,7 @@ function initMap() {
 
   const sizePx = document.getElementById("map").clientWidth || 300;
   const zoom = Math.min(maxZoom, zoomForRadius(lat, maxRadius, sizePx));
-  dynamicMinZoom = zoom - 1.5;
+  dynamicMinZoom = zoom-1;
 
   map = new maplibregl.Map({
     container: "map",
@@ -35,6 +35,8 @@ function initMap() {
     maxZoom,
     attributionControl: false,
   });
+
+  
 
   new maplibregl.Marker().setLngLat([lon, lat]).addTo(map);
 
@@ -53,6 +55,31 @@ function initMap() {
       correcting = false;
     }
   });
+  
+  // map.on("move", () => {
+  //   if (correcting) return;
+  //   const c = map.getCenter();
+  //   const dist = distanceMeters(lat, lon, c.lat, c.lng);
+  
+  //   // rayon visible approximatif (demi-diagonale de la vue, en mètres)
+  //   const bounds = map.getBounds();
+  //   const viewReach = distanceMeters(
+  //     c.lat, c.lng,
+  //     bounds.getNorth(), bounds.getEast()
+  //   );
+  
+  //   // le centre ne peut pas s'approcher du bord à moins de viewReach
+  //   const allowed = Math.max(0, maxRadius - viewReach);
+  //   if (dist > allowed) {
+  //     correcting = true;
+  //     const ratio = allowed / dist;
+  //     map.setCenter([
+  //       lon + (c.lng - lon) * ratio,
+  //       lat + (c.lat - lat) * ratio,
+  //     ]);
+  //     correcting = false;
+  //   }
+  // });
 
   document.getElementById("mapCornerBtn").addEventListener("click", function () {
     map.rotateTo(0);
@@ -68,6 +95,46 @@ function initMap() {
         map.setLayoutProperty(id, "visibility", "none")
       );
       resolve();
+
+      // DEBUG
+      const radius = maxRadius / 1000; // kilometer
+      const options = {
+          steps: 64,
+          units: 'kilometers'
+      };
+      const circle = turf.circle([lon, lat], radius, options);
+
+      const bbox = turf.bbox(circle); // [ouest, sud, est, nord]
+      map.setMaxBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]]);
+    
+      // Add the circle as a GeoJSON source
+      map.addSource('location-radius', {
+          type: 'geojson',
+          data: circle
+      });
+    
+      // Add a fill layer with some transparency
+      map.addLayer({
+          id: 'location-radius',
+          type: 'fill',
+          source: 'location-radius',
+          paint: {
+              'fill-color': '#8CCFFF',
+              'fill-opacity': 0.5
+          }
+      });
+    
+      // Add a line layer to draw the circle outline
+      map.addLayer({
+          id: 'location-radius-outline',
+          type: 'line',
+          source: 'location-radius',
+          paint: {
+              'line-color': '#0094ff',
+              'line-width': 3
+          }
+      });
+      // DEBUG
     });
   });
 }

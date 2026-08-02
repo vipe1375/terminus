@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,10 +7,12 @@
         
         <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
         <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+        <script src="https://unpkg.com/@turf/turf@7/turf.min.js"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Untitled Metro Game</h1>
+        <h1> <a href="/">Untitled Metro Game</a> </h1>
+        
 
         <div id="tutorialOverlay" class="tutorialOverlay">
             <div class="tutorialBox">
@@ -58,6 +60,8 @@
                 <span id="difficultyDot"></span>
                 <span id="difficultyText"></span>
             </div>
+
+            <div id="streakText"></div>
         </div>
         
         <div class="mapContainer">

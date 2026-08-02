@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.0.13
+### Ajouté
+- série en cours (streak)
+- titre qui ramène à l'accueil sur toutes les pages 
+### Modifié
+- taille de la liste Archives
+- limites plus larges quand la station est classée + difficile
+- autocomplétion des suggestions améliorées : 
+- - gestion des accents
+- - la correspondance ne se fait plus uniquement avec le début du nom de la station mais avec le nom complet
+- - utilisation des flèches du clavier pour naviguer dans les options
+### Corrigé
+- bug de la partie de la veille dans les archives
+- correction des limites de la carte
+
+
 ## v0.0.12
 ### Ajouté
 - `TODO.md`
