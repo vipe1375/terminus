@@ -260,20 +260,8 @@ input[type="text"] {
     gap: 6px;
     justify-content: space-between;
     padding-top: 20px;
-<<<<<<< HEAD
-}
-
-.pageContent {
-    max-width: 600px;
-    width: 100%;
-    padding: 0 16px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    text-align: center;
-=======
     font-weight: 500;
 }
 #streakText:empty {
     display: none;
->>>>>>> dev
 }
