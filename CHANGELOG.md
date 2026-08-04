@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.0.14
+### Modifié
+- fond de carte
+- texte du tutoriel
+
 ## v0.0.13
 ### Ajouté
 - série en cours (streak)

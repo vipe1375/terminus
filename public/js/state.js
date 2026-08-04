@@ -6,7 +6,7 @@ let costs = null;
 
 // Style vectoriel libre (OpenFreeMap). Les libellés sont masqués au départ
 // et réaffichés via l'option "noms des rues".
-const mapStyle = "https://tiles.openfreemap.org/styles/positron";
+const mapStyle = "https://tiles.openfreemap.org/styles/bright";
 let labelLayerIds = [];
 
 let currentStation = null; // { lat, lon, lines, name } — name reste null tant que non révélé

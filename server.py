@@ -63,10 +63,10 @@ def target_for(day):
 # Parse une date client et la borne : jamais dans le futur.
 def safe_day(value):
     try:
-        day = datetime.strptime(value, "%Y-%m-%d").date()
+        day = datetime.strptime(value, "%Y-%m-%d").date()  # noqa: DTZ007
     except (TypeError, ValueError):
-        return date.today()
-    return min(day, date.today())
+        return date.today()  # noqa: DTZ011
+    return min(day, date.today())  # noqa: DTZ011
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -152,7 +152,7 @@ class Handler(BaseHTTPRequestHandler):
         })
 
     def _archive(self):
-        today = date.today()
+        today = date.today()  # noqa: DTZ011
         days = []
         d = LAUNCH_DATE
         while d < today:  # exclut aujourd'hui (jour courant, non spoile)
