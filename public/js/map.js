@@ -101,11 +101,7 @@ function initMap() {
         .forEach((l) => map.setLayoutProperty(l.id, "visibility", "none"));
       resolve();
 
-<<<<<<< HEAD
-      
-=======
       // FRONTIÈRES DE LA CARTE
->>>>>>> dev
       const radius = maxRadius / 1000; // kilometer
       const options = {
           steps: 64,
@@ -116,18 +112,12 @@ function initMap() {
       const bbox = turf.bbox(circle); // [ouest, sud, est, nord]
       map.setMaxBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]]);
 
-<<<<<<< HEAD
       // DEBUG
       // // Add the circle as a GeoJSON source
-=======
-      
-      // Add the circle as a GeoJSON source
->>>>>>> dev
       // map.addSource('location-radius', {
       //     type: 'geojson',
       //     data: circle
       // });
-<<<<<<< HEAD
     
       // // Add a fill layer with some transparency
       // map.addLayer({
@@ -140,20 +130,6 @@ function initMap() {
       //     }
       // });
     
-=======
-    
-      // // Add a fill layer with some transparency
-      // map.addLayer({
-      //     id: 'location-radius',
-      //     type: 'fill',
-      //     source: 'location-radius',
-      //     paint: {
-      //         'fill-color': '#8CCFFF',
-      //         'fill-opacity': 0.5
-      //     }
-      // });
-    
->>>>>>> dev
       // // Add a line layer to draw the circle outline
       // map.addLayer({
       //     id: 'location-radius-outline',
