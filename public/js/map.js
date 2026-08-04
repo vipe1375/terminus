@@ -87,16 +87,21 @@ function initMap() {
 
   return new Promise((resolve) => {
     map.on("load", () => {
-      labelLayerIds = map
-        .getStyle()
-        .layers.filter((l) => l.type === "symbol")
-        .map((l) => l.id);
-      labelLayerIds.forEach((id) =>
-        map.setLayoutProperty(id, "visibility", "none")
-      );
+
+      // MASQUAGE DES LABELS
+      const stationLayers = ["poi", "transit"]; // motifs à ne jamais réafficher (à ajuster)
+      
+      labelLayerIds = map.getStyle().layers
+        .filter((l) => l.type === "symbol")
+        .map((l) => l.id)
+        .filter((id) => !stationLayers.some((s) => id.includes(s)));
+      
+      map.getStyle().layers
+        .filter((l) => l.type === "symbol")
+        .forEach((l) => map.setLayoutProperty(l.id, "visibility", "none"));
       resolve();
 
-      // DEBUG
+      // FRONTIÈRES DE LA CARTE
       const radius = maxRadius / 1000; // kilometer
       const options = {
           steps: 64,
@@ -106,34 +111,35 @@ function initMap() {
 
       const bbox = turf.bbox(circle); // [ouest, sud, est, nord]
       map.setMaxBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]]);
-    
+
+      
       // Add the circle as a GeoJSON source
-      map.addSource('location-radius', {
-          type: 'geojson',
-          data: circle
-      });
+      // map.addSource('location-radius', {
+      //     type: 'geojson',
+      //     data: circle
+      // });
     
-      // Add a fill layer with some transparency
-      map.addLayer({
-          id: 'location-radius',
-          type: 'fill',
-          source: 'location-radius',
-          paint: {
-              'fill-color': '#8CCFFF',
-              'fill-opacity': 0.5
-          }
-      });
+      // // Add a fill layer with some transparency
+      // map.addLayer({
+      //     id: 'location-radius',
+      //     type: 'fill',
+      //     source: 'location-radius',
+      //     paint: {
+      //         'fill-color': '#8CCFFF',
+      //         'fill-opacity': 0.5
+      //     }
+      // });
     
-      // Add a line layer to draw the circle outline
-      map.addLayer({
-          id: 'location-radius-outline',
-          type: 'line',
-          source: 'location-radius',
-          paint: {
-              'line-color': '#0094ff',
-              'line-width': 3
-          }
-      });
+      // // Add a line layer to draw the circle outline
+      // map.addLayer({
+      //     id: 'location-radius-outline',
+      //     type: 'line',
+      //     source: 'location-radius',
+      //     paint: {
+      //         'line-color': '#0094ff',
+      //         'line-width': 3
+      //     }
+      // });
       // DEBUG
     });
   });

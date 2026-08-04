@@ -5,6 +5,9 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'General Sans', sans-serif;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 @font-face {
   font-family: 'Le-Murmure';
