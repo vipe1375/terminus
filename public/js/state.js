@@ -11,6 +11,7 @@ let labelLayerIds = [];
 
 let currentStation = null; // { lat, lon, lines, name } — name reste null tant que non révélé
 let dailyDate = null;
+let isArchive = null;   // variable globale à déclarer avec les autres
 let dailyNeighbours = [];
 let stationsNames = null;
 let difficulty = null;
@@ -19,7 +20,6 @@ let map = null;
 let endGame = false;
 let points = 100;
 let answer = null;
-let streak = 0;
 
 const maxSuggestions = 5;
 

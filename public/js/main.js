@@ -33,8 +33,6 @@ async function guess() {
 
   if (res.correct) {
     endGame = true;
-    streak += 1;
-    updateStreak();
     document.getElementById("guessForm").style.display = "none";
     showEndScreen();
   }
@@ -42,8 +40,12 @@ async function guess() {
   if (!res.correct) {
     updatePoints(costs.attempts);
   }
-  renderAttempts();
+  
   saveProgress();
+
+  console.log("streak =", loadStreak());
+  renderAttempts();
+  renderStreak();
 }
 
 function useOnce(button, action, malus) {
@@ -60,6 +62,7 @@ async function main() {
   initTutorial();
 
   const daily = await loadDaily();
+  isArchive = daily.archive;
   dailyDate = daily.date;
   dailyNeighbours = daily.neighbours || [];
   currentStation = { lat: daily.lat, lon: daily.lon, lines: daily.lines, name: null };
@@ -68,9 +71,7 @@ async function main() {
   costs = daily.points;
 
   await loadStationNames();
-
-  streak = loadStreak();
-
+  
   await initMap();
   
   const saved = loadProgress(dailyDate);
@@ -92,7 +93,9 @@ async function main() {
     });
   }
 
-  updateStreak();
+  if (!isArchive) {
+    renderStreak();
+  }
   
   autocomplete(document.getElementById("guess"), stationsNames);
 

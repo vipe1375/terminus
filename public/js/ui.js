@@ -169,7 +169,8 @@ function showEndScreen() {
   });
 }
 
-function updateStreak() {
+function renderStreak() {
+  streak = loadStreak();
   if (streak != 0 && streak != null) {
     streakText = document.getElementById("streakText")
     streakText.textContent = `${streak}🔥`;
