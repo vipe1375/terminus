@@ -20,7 +20,6 @@ let map = null;
 let endGame = false;
 let points = 100;
 let answer = null;
-let streak = 0;
 
 const maxSuggestions = 5;
 

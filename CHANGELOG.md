@@ -7,6 +7,7 @@
 - nom du jeu : le jeu devient officiellement Terminus
 ### Corrigé
 - la streak n'est plus incrémentée quand on termine une partie d'archive
+- la streak est bien réinitialisée quand on manque une journée
 
 ## v0.0.13
 ### Ajouté

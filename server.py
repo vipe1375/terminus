@@ -164,7 +164,7 @@ class Handler(BaseHTTPRequestHandler):
         self._send_json(days)
 
     def _guess(self, body):
-        day = safe_day(body.get("date"))  # passe accepte, futur borne a aujourd'hui
+        day = safe_day(body.get("date"))  # passé accepté, futur borné à aujourd'hui
         guess = NORM_INDEX.get(normalize(body.get("name", "")))
         if not guess:
             return self._send_json({"error": "unknown_station"}, 400)
