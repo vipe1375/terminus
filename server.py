@@ -144,6 +144,7 @@ class Handler(BaseHTTPRequestHandler):
         ]
         self._send_json({
             "date": day.isoformat(),
+            "archive": day < date.today(),
             "lat": target["lat"], "lon": target["lon"], "lines": target["lines"],
             "difficulty": target["difficulty"],
             "neighbours": neighbours,

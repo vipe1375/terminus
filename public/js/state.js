@@ -11,6 +11,7 @@ let labelLayerIds = [];
 
 let currentStation = null; // { lat, lon, lines, name } — name reste null tant que non révélé
 let dailyDate = null;
+let isArchive = null;   // variable globale à déclarer avec les autres
 let dailyNeighbours = [];
 let stationsNames = null;
 let difficulty = null;

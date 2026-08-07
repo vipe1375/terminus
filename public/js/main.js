@@ -33,8 +33,10 @@ async function guess() {
 
   if (res.correct) {
     endGame = true;
-    streak += 1;
-    updateStreak();
+    if (!isArchive) {
+        streak += 1;
+        updateStreak();
+      }
     document.getElementById("guessForm").style.display = "none";
     showEndScreen();
   }
@@ -60,6 +62,7 @@ async function main() {
   initTutorial();
 
   const daily = await loadDaily();
+  isArchive = daily.archive;
   dailyDate = daily.date;
   dailyNeighbours = daily.neighbours || [];
   currentStation = { lat: daily.lat, lon: daily.lon, lines: daily.lines, name: null };
@@ -92,7 +95,9 @@ async function main() {
     });
   }
 
-  updateStreak();
+  if (!isArchive) {
+    updateStreak();
+  }
   
   autocomplete(document.getElementById("guess"), stationsNames);
 
