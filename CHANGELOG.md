@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.0: release 
+Le jeu devient Terminus et est jouable [ici](https://terminus-game.fr)
+### Ajouté
+- icône d'onglet
+### Corrigé
+- titre de la page
+
 ## v0.0.14
 ### Modifié
 - fond de carte

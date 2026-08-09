@@ -38,6 +38,7 @@ EPOCH = date(2024, 1, 1)
 CONTENT_TYPES = {
     ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8",
     ".js": "application/javascript; charset=utf-8",
+    ".svg": "image/svg+xml",
 }
 
 with open(STATIONS_PATH, encoding="utf-8") as f:
