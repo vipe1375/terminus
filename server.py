@@ -4,9 +4,8 @@ Choisit une station par jour (meme station pour tout le monde) et ne revele
 jamais son nom au client avant que la partie soit terminee. Les jours passes
 sont rejouables via un parametre date ; les jours futurs sont toujours refuses.
 Bibliotheque standard uniquement.
-
-Lancer : python3 server.py   (http://localhost:8000)
 """
+
 import json
 import math
 import os

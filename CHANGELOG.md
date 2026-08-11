@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.1
+### Ajouté
+- logo transparent (pk pas)
+### Modifié
+- icône d'onglet
+### Corrigé
+- calcul de la streak basé sur l'heure locale au lieu de l'heure du serveur, créant un décalage pour les joueurs dans un fuseau horaire différent du serveur
+
 ## v1.0.0: release 
 Le jeu devient Terminus et est jouable [ici](https://terminus-game.fr)
 ### Ajouté

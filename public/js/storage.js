@@ -24,14 +24,15 @@ function toISODate(d) {
 
 function loadStreak() {
   let count = 0;
-  const d = new Date();
+  const [y, m, day] = dailyDate.split("-").map(Number);
+  const d = new Date(y, m - 1, day); // même date que celle utilisée pour sauvegarder
   let first = true;
   while (true) {
-    const saved = loadProgress(toISODate(d)); // réutilise ta fonction existante
+    const saved = loadProgress(toISODate(d));
     if (saved && saved.solvedAsDaily) {
       count += 1;
     } else if (!first) {
-      break; // un jour manqué (hors aujourd'hui) casse la série
+      break;
     }
     first = false;
     d.setDate(d.getDate() - 1);
