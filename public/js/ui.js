@@ -48,14 +48,21 @@ function autocomplete(inp, arr) {
       let ind = normalizeText(arr[i]).indexOf(normalizeText(val));
       if (ind != -1) {
         nSuggestions += 1;
+
+        const used = guesses.some((g) => g.name.toLowerCase() === arr[i].toLowerCase())
+        
         b = document.createElement("div");
         b.innerHTML = arr[i].slice(0, ind) + "<strong>" + arr[i].slice(ind, ind+val.length) + "</strong>" + arr[i].slice(ind+val.length);
-        // b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>" + arr[i].substr(val.length);
-        b.dataset.value = arr[i];   // stockage sûr, pas d'échappement HTML
+        b.dataset.value = arr[i];   
 
-        b.addEventListener("click", function () {
-          inp.value = this.dataset.value;          closeAllLists();
-        });
+        if (used) {
+          b.classList.add("autocomplete-used");
+        } else {
+          b.addEventListener("click", function () {
+            inp.value = this.dataset.value;
+            closeAllLists();
+          });
+        }
 
         a.appendChild(b);
       }

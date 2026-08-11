@@ -1,5 +1,9 @@
 # Changelog
 
+# À venir
+### Modifié
+- les stations déjà tentées apparaîtront grisées dans la liste
+
 ## v1.0.1
 ### Ajouté
 - logo transparent (pk pas)
