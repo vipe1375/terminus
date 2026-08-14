@@ -3,6 +3,8 @@
 # À venir
 ### Modifié
 - les stations déjà tentées apparaîtront grisées dans la liste
+### Corrigé
+- nom du jeu dans le `README.md`
 
 ## v1.0.1
 ### Ajouté
