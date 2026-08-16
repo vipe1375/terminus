@@ -93,7 +93,10 @@ async function main() {
     });
   }
 
-  if (!isArchive) {
+  if (isArchive) {
+    renderArchiveSubHeader(daily.date);
+  }
+  else {
     renderStreak();
   }
   

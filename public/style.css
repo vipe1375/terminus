@@ -22,12 +22,16 @@ h1 {
     font-family: 'Le-Murmure', monospace;
     color: #003878;
     font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
 h2 {
     font-size: 28pt;
     font-family: 'Le-Murmure', monospace;
     color: #003878;
     font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
 h1 a {
     color: inherit;
@@ -153,7 +157,7 @@ h1 a {
 
 .archivesContainer {
     margin-top: 20px;
-    width: 220px;
+    width: 250px;
     max-height: 50vh;
     overflow-y: auto;
     display: flex;

@@ -184,3 +184,11 @@ function renderStreak() {
     streakText.style.fontWeight = 600;
   }
 }
+
+function renderArchiveSubHeader(date) {
+  var header = document.getElementById("archiveSubHeader");
+  const [y, m, day] = date.split("-");
+  const nice = `${day}/${m}/${y}`;
+  header.textContent = `Archive du ${nice}`;
+  header.style = ""
+}

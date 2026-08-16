@@ -1,10 +1,16 @@
 # Changelog
 
-# À venir
+# v1.0.2
+### Ajouté
+- sous-titre quand on joue une partie d'archives
+- points dans la liste des archives
 ### Modifié
 - les stations déjà tentées apparaîtront grisées dans la liste
+- espacement des titres
+- agencement de la liste des archives
 ### Corrigé
 - nom du jeu dans le `README.md`
+- vignette qui ne s'affichait que sur la page principale
 
 ## v1.0.1
 ### Ajouté
