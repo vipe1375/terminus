@@ -1,5 +1,11 @@
 # Changelog
 
+# v1.0.3
+### Modifié
+- `TODO.md`
+### Corrigé
+- affichage de la carte sur mobile
+
 # v1.0.2
 ### Ajouté
 - sous-titre quand on joue une partie d'archives

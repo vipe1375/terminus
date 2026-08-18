@@ -91,6 +91,9 @@ h1 a {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
+    transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
 }
 #mapCornerBtn {
     position: absolute;
