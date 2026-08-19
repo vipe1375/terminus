@@ -40,3 +40,7 @@ function loadStreak() {
   return count;
 }
 
+async function loadLines() {
+  linesData = await fetch("/data/lines_clean.json").then((r) => r.json());
+}
+

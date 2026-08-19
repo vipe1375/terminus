@@ -71,6 +71,7 @@ async function main() {
   costs = daily.points;
 
   await loadStationNames();
+  await loadLines();
   
   await initMap();
   

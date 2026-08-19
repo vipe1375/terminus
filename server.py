@@ -7,6 +7,7 @@ Bibliotheque standard uniquement.
 """
 
 import json
+import gzip
 import math
 import os
 import random
@@ -38,6 +39,7 @@ CONTENT_TYPES = {
     ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8",
     ".js": "application/javascript; charset=utf-8",
     ".svg": "image/svg+xml",
+    ".json": "application/json; charset=utf-8",
 }
 
 with open(STATIONS_PATH, encoding="utf-8") as f:
@@ -98,8 +100,32 @@ class Handler(BaseHTTPRequestHandler):
         ext = os.path.splitext(full)[1]
         with open(full, "rb") as f:
             body = f.read()
+
+        accepts_gzip = "gzip" in self.headers.get("Accept-Encoding", "")
+        compressible = ext in (".json", ".js", ".css", ".html", ".svg")
+
         self.send_response(200)
         self.send_header("Content-Type", CONTENT_TYPES.get(ext, "application/octet-stream"))
+        if accepts_gzip and compressible:
+            body = gzip.compress(body)
+            self.send_header("Content-Encoding", "gzip")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _send_data_file(self, name):
+        full = os.path.join(ROOT, "data", name)
+        if not os.path.isfile(full):
+            return self._send_json({"error": "not found"}, 404)
+        with open(full, "rb") as f:
+            body = f.read()
+
+        accepts_gzip = "gzip" in self.headers.get("Accept-Encoding", "")
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        if accepts_gzip:
+            body = gzip.compress(body)
+            self.send_header("Content-Encoding", "gzip")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
@@ -126,6 +152,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._archive()
         if path == "/api/stations":
             return self._send_json([s["name"] for s in STATIONS])
+        if path == "/data/lines_clean.json":
+                    return self._send_data_file("lines_clean.json")
         return self._send_file(path.lstrip("/"))
 
     def do_POST(self):

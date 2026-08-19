@@ -111,36 +111,6 @@ function initMap() {
 
       const bbox = turf.bbox(circle); // [ouest, sud, est, nord]
       map.setMaxBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]]);
-
-      // DEBUG
-      // // Add the circle as a GeoJSON source
-      // map.addSource('location-radius', {
-      //     type: 'geojson',
-      //     data: circle
-      // });
-    
-      // // Add a fill layer with some transparency
-      // map.addLayer({
-      //     id: 'location-radius',
-      //     type: 'fill',
-      //     source: 'location-radius',
-      //     paint: {
-      //         'fill-color': '#8CCFFF',
-      //         'fill-opacity': 0.5
-      //     }
-      // });
-    
-      // // Add a line layer to draw the circle outline
-      // map.addLayer({
-      //     id: 'location-radius-outline',
-      //     type: 'line',
-      //     source: 'location-radius',
-      //     paint: {
-      //         'line-color': '#0094ff',
-      //         'line-width': 3
-      //     }
-      // });
-      // DEBUG
     });
   });
 }
@@ -197,6 +167,13 @@ function changeLinesState(malus) {
   el.appendChild(badgesEl(currentStation.lines));
   linesMarker = makeMarker(currentStation.lat, currentStation.lon, el);
 
+  // affichage des tracés
+  console.log(currentStation.lines);
+  const shapes = currentStation.lines
+    .map((l) => linesData[l.short])
+    .filter(Boolean);
+  showLines(shapes);
+
   updatePoints(malus);
 }
 
@@ -215,4 +192,26 @@ function badgesEl(lines) {
   wrap.className = "badges";
   lines.forEach((l) => wrap.appendChild(badgeEl(l)));
   return wrap;
+}
+
+function showLines(shapes) {
+  // shapes : liste de { color, shape } (entrées de linesData)
+  const features = shapes.map((s) => ({
+    ...s.shape,
+    properties: { color: "#" + s.color },
+  }));
+  const data = { type: "FeatureCollection", features };
+
+  if (map.getSource("lines")) {
+    map.getSource("lines").setData(data);
+  } else {
+    map.addSource("lines", { type: "geojson", data });
+    map.addLayer({
+      id: "lines",
+      type: "line",
+      source: "lines",
+      layout: { "line-join": "round", "line-cap": "round" },
+      paint: { "line-color": ["get", "color"], "line-width": 4 },
+    });
+  }
 }

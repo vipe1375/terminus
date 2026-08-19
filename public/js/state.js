@@ -20,6 +20,7 @@ let map = null;
 let endGame = false;
 let points = 100;
 let answer = null;
+let linesData = null;
 
 const maxSuggestions = 5;
 
