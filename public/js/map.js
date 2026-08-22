@@ -152,10 +152,15 @@ function changeNeighboursState(malus) {
     neighboursMarkers.push(makeMarker(n.lat, n.lon, el));
   });
 
+  const shapes = Object.values(linesData)
+    .map((s) => ({ ...s, shape: clip(s.shape, [currentStation.lon, currentStation.lat], 1) }))
+    .filter((s) => s.shape.geometry.coordinates.length);  // écarte celles hors zone
+  showLines(shapes);
+
   updatePoints(malus);
 }
 
-function changeLinesState(malus) {
+function changeLinesState(malus, showNeighbours=false) {
   if (linesMarker) {
     linesMarker.remove();
     linesMarker = null;
@@ -168,10 +173,10 @@ function changeLinesState(malus) {
   linesMarker = makeMarker(currentStation.lat, currentStation.lon, el);
 
   // affichage des tracés
-  console.log(currentStation.lines);
   const shapes = currentStation.lines
     .map((l) => linesData[l.short])
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((s) => ({ ...s, shape: clip(s.shape, [currentStation.lon, currentStation.lat], 0.2) }));
   showLines(shapes);
 
   updatePoints(malus);
@@ -214,4 +219,29 @@ function showLines(shapes) {
       paint: { "line-color": ["get", "color"], "line-width": 4 },
     });
   }
+}
+
+function clip(shape, center, km) {   // center = [lon, lat]
+  const pt = turf.point(center);
+  const segs = [];
+
+  shape.geometry.coordinates.forEach((coords) => {
+    if (coords.length < 2) return;
+    const line = turf.lineString(coords);
+    const total = turf.length(line, { units: "kilometers" });
+
+    // position (en km depuis le début) du point le plus proche de la station
+    const snapped = turf.nearestPointOnLine(line, pt, { units: "kilometers" });
+    const at = snapped.properties.location;
+
+    // fenêtre [at-km, at+km] bornée aux extrémités de la ligne
+    const start = Math.max(0, at - km);
+    const end = Math.min(total, at + km);
+    if (end - start <= 0) return;
+
+    const slice = turf.lineSliceAlong(line, start, end, { units: "kilometers" });
+    segs.push(slice.geometry.coordinates);
+  });
+
+  return { ...shape, geometry: { type: "MultiLineString", coordinates: segs } };
 }
