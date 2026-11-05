@@ -17,11 +17,7 @@ async function guess() {
   );
   if (alreadyGuessed) return;
 
-  const res = await fetch("/api/guess", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ date: dailyDate, name: value, points: points-costs.attempts }),
-  }).then((r) => r.json());
+  const res = await apiGuess(dailyDate, value, points - costs.attempts);
 
   if (res.error) return; // station inconnue : on ignore simplement
 

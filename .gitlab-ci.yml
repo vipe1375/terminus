@@ -1,0 +1,12 @@
+# Déploie le site statique sur GitLab Pages à chaque push sur la branche par défaut.
+# GitLab Pages publie le dossier "public/" ; on y copie les données avant.
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public/data
+    - cp data/stations_ranked.json data/lines_clean.json data/daily_order.json public/data/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

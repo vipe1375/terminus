@@ -20,7 +20,7 @@ function gameState(date) {
 }
 
 async function loadArchive() {
-  const days = await fetch("/api/archive").then((r) => r.json());
+  const days = await apiArchive();
   const container = document.getElementById("archiveList");
 
   // En-tête
